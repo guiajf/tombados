@@ -1,0 +1,3793 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_81b1a76e17fb199024fe9b42ef04a4b2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_81b1a76e17fb199024fe9b42ef04a4b2" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_81b1a76e17fb199024fe9b42ef04a4b2 = L.map(
+                "map_81b1a76e17fb199024fe9b42ef04a4b2",
+                {
+                    center: [-21.7625, -43.35],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_874293e098e3328effffdc83d3699d1b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_874293e098e3328effffdc83d3699d1b.addTo(map_81b1a76e17fb199024fe9b42ef04a4b2);
+        
+    
+            var marker_cluster_b164b252002479a35bb1c092369d1ab9 = L.markerClusterGroup(
+                {
+  "maxClusterRadius": 40,
+}
+            );
+        
+    
+            var marker_c0c10578c93acbcdaa03d706844d6885 = L.marker(
+                [-21.761111111111113, -43.34805555555556],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_66c446b31c2dae1515af234823b5c577 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a35b2211602937d44f4178fa977e4f1d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e443e099d24b314dae4312c7e7f24d66 = $(`<div id="html_e443e099d24b314dae4312c7e7f24d66" style="width: 100.0%; height: 100.0%;">Agência Bradesco</div>`)[0];
+                popup_a35b2211602937d44f4178fa977e4f1d.setContent(html_e443e099d24b314dae4312c7e7f24d66);
+            
+        
+
+        marker_c0c10578c93acbcdaa03d706844d6885.bindPopup(popup_a35b2211602937d44f4178fa977e4f1d)
+        ;
+
+        
+    
+    
+                marker_c0c10578c93acbcdaa03d706844d6885.setIcon(icon_66c446b31c2dae1515af234823b5c577);
+            
+    
+            var marker_a857a2ca179a32322273df57872900de = L.marker(
+                [-21.761388888888888, -43.34305555555556],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_95061909188ceeffdce4052a09aba761 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1671124f8e7ac3bba390668f0e0d78be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cd8a7b3c0d36e5315a8a9aae84d498f2 = $(`<div id="html_cd8a7b3c0d36e5315a8a9aae84d498f2" style="width: 100.0%; height: 100.0%;">Alfândega Seca</div>`)[0];
+                popup_1671124f8e7ac3bba390668f0e0d78be.setContent(html_cd8a7b3c0d36e5315a8a9aae84d498f2);
+            
+        
+
+        marker_a857a2ca179a32322273df57872900de.bindPopup(popup_1671124f8e7ac3bba390668f0e0d78be)
+        ;
+
+        
+    
+    
+                marker_a857a2ca179a32322273df57872900de.setIcon(icon_95061909188ceeffdce4052a09aba761);
+            
+    
+            var marker_35889639f37d60848ab2b4ca1340c84c = L.marker(
+                [-21.75861111111111, -43.348888888888894],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_e7e938f2de55298183a3a3216341c90e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_69e851cef90fc5c7ebe3a32abb0cd3e4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8bd7b0d0aa5ac823db75899bf48271d0 = $(`<div id="html_8bd7b0d0aa5ac823db75899bf48271d0" style="width: 100.0%; height: 100.0%;">Antiga Diretoria de Higiene – DCE</div>`)[0];
+                popup_69e851cef90fc5c7ebe3a32abb0cd3e4.setContent(html_8bd7b0d0aa5ac823db75899bf48271d0);
+            
+        
+
+        marker_35889639f37d60848ab2b4ca1340c84c.bindPopup(popup_69e851cef90fc5c7ebe3a32abb0cd3e4)
+        ;
+
+        
+    
+    
+                marker_35889639f37d60848ab2b4ca1340c84c.setIcon(icon_e7e938f2de55298183a3a3216341c90e);
+            
+    
+            var marker_6e84b433f72d4d1683973f35cfddbc25 = L.marker(
+                [-21.772777777777776, -43.346944444444446],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_7b4e103c8edfc341a5cb43afd3b8165e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_47f9a672a352653867b5e01bcc27ffe1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d04745a42c2600bb6af47618a4a8ca88 = $(`<div id="html_d04745a42c2600bb6af47618a4a8ca88" style="width: 100.0%; height: 100.0%;">Antiga Residência Iris Martins Vilela</div>`)[0];
+                popup_47f9a672a352653867b5e01bcc27ffe1.setContent(html_d04745a42c2600bb6af47618a4a8ca88);
+            
+        
+
+        marker_6e84b433f72d4d1683973f35cfddbc25.bindPopup(popup_47f9a672a352653867b5e01bcc27ffe1)
+        ;
+
+        
+    
+    
+                marker_6e84b433f72d4d1683973f35cfddbc25.setIcon(icon_7b4e103c8edfc341a5cb43afd3b8165e);
+            
+    
+            var marker_f28efbf47bf74944ad5372db56d34fee = L.marker(
+                [-21.756944444444443, -43.348888888888894],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_2ac857289fe17a744ea2323255768568 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3439e3844d334d73d46b39508fe2205f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_53295f8aa19c415e44b036e2a9829706 = $(`<div id="html_53295f8aa19c415e44b036e2a9829706" style="width: 100.0%; height: 100.0%;">Antigas Instalações da Companhia de Fiação e Tecelagem Santa Cruz</div>`)[0];
+                popup_3439e3844d334d73d46b39508fe2205f.setContent(html_53295f8aa19c415e44b036e2a9829706);
+            
+        
+
+        marker_f28efbf47bf74944ad5372db56d34fee.bindPopup(popup_3439e3844d334d73d46b39508fe2205f)
+        ;
+
+        
+    
+    
+                marker_f28efbf47bf74944ad5372db56d34fee.setIcon(icon_2ac857289fe17a744ea2323255768568);
+            
+    
+            var marker_1934db585650ddf1bcc92c8aa5617b5e = L.marker(
+                [-21.761388888888888, -43.344722222222224],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_0b509b5b39d9f9cd13e674644c78b5e3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4f410280cf11ea5d6b49be8011373d10 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ec3b1aeda83fb003ae4b273bf3e6ba72 = $(`<div id="html_ec3b1aeda83fb003ae4b273bf3e6ba72" style="width: 100.0%; height: 100.0%;">Antigas Instalações da Fábrica Bernardo Mascarenhas</div>`)[0];
+                popup_4f410280cf11ea5d6b49be8011373d10.setContent(html_ec3b1aeda83fb003ae4b273bf3e6ba72);
+            
+        
+
+        marker_1934db585650ddf1bcc92c8aa5617b5e.bindPopup(popup_4f410280cf11ea5d6b49be8011373d10)
+        ;
+
+        
+    
+    
+                marker_1934db585650ddf1bcc92c8aa5617b5e.setIcon(icon_0b509b5b39d9f9cd13e674644c78b5e3);
+            
+    
+            var marker_382700c9335fd2d07e50b44342661094 = L.marker(
+                [-21.7625, -43.34305555555556],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_e886e29d2c201fd51b06910b7a815557 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2172e64d700090afd53438b5b85cf5de = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_514b6ae1867a6ae39e1ae2075b001ccc = $(`<div id="html_514b6ae1867a6ae39e1ae2075b001ccc" style="width: 100.0%; height: 100.0%;">Antigas instalações da Companhia Industrial e Construtora Pantaleone Arcuri</div>`)[0];
+                popup_2172e64d700090afd53438b5b85cf5de.setContent(html_514b6ae1867a6ae39e1ae2075b001ccc);
+            
+        
+
+        marker_382700c9335fd2d07e50b44342661094.bindPopup(popup_2172e64d700090afd53438b5b85cf5de)
+        ;
+
+        
+    
+    
+                marker_382700c9335fd2d07e50b44342661094.setIcon(icon_e886e29d2c201fd51b06910b7a815557);
+            
+    
+            var marker_88dd6c8b54dc0b9e684030b0f8d09811 = L.marker(
+                [-21.760833333333334, -43.346111111111114],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_a14acb0a7568824a6d679e9de6d6e0f6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e7a6825fc7201b64befca37c3ec7d762 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d3391a70420dd7a1ae8369957da40f6a = $(`<div id="html_d3391a70420dd7a1ae8369957da40f6a" style="width: 100.0%; height: 100.0%;">Antigo Palace Hotel</div>`)[0];
+                popup_e7a6825fc7201b64befca37c3ec7d762.setContent(html_d3391a70420dd7a1ae8369957da40f6a);
+            
+        
+
+        marker_88dd6c8b54dc0b9e684030b0f8d09811.bindPopup(popup_e7a6825fc7201b64befca37c3ec7d762)
+        ;
+
+        
+    
+    
+                marker_88dd6c8b54dc0b9e684030b0f8d09811.setIcon(icon_a14acb0a7568824a6d679e9de6d6e0f6);
+            
+    
+            var marker_ed6f0712b409bb0b9922d5add0ff19fa = L.marker(
+                [-21.760555555555555, -43.346111111111114],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_22eff4036036c2a567762175aeab5bb3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_47409a16fdfec93229ecb9f44ff8a7cf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_528b74d838e864311e03c1c4066be25e = $(`<div id="html_528b74d838e864311e03c1c4066be25e" style="width: 100.0%; height: 100.0%;">Antigo Palace Hotel</div>`)[0];
+                popup_47409a16fdfec93229ecb9f44ff8a7cf.setContent(html_528b74d838e864311e03c1c4066be25e);
+            
+        
+
+        marker_ed6f0712b409bb0b9922d5add0ff19fa.bindPopup(popup_47409a16fdfec93229ecb9f44ff8a7cf)
+        ;
+
+        
+    
+    
+                marker_ed6f0712b409bb0b9922d5add0ff19fa.setIcon(icon_22eff4036036c2a567762175aeab5bb3);
+            
+    
+            var marker_b989b2d1fbfea8b157d4efccb9c16f12 = L.marker(
+                [-21.791666666666668, -43.367222222222225],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_a1e50dad13e7fa557ee077817904ba0c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_25d7ddd7b214a5c4b29ab42a770c33e0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b2bef2427f39b2a86bc122a9e4bafcff = $(`<div id="html_b2bef2427f39b2a86bc122a9e4bafcff" style="width: 100.0%; height: 100.0%;">Antigos Bondes</div>`)[0];
+                popup_25d7ddd7b214a5c4b29ab42a770c33e0.setContent(html_b2bef2427f39b2a86bc122a9e4bafcff);
+            
+        
+
+        marker_b989b2d1fbfea8b157d4efccb9c16f12.bindPopup(popup_25d7ddd7b214a5c4b29ab42a770c33e0)
+        ;
+
+        
+    
+    
+                marker_b989b2d1fbfea8b157d4efccb9c16f12.setIcon(icon_a1e50dad13e7fa557ee077817904ba0c);
+            
+    
+            var marker_b3770c235757064d724fe65a122738dc = L.marker(
+                [-21.760555555555555, -43.34861111111111],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_2031fb3c7392407e572df3e766f8d294 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c9dcffce09712680c0b7b45e5b3b8dca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d7bfe224708c2cf6cd63e47b2ee32d58 = $(`<div id="html_d7bfe224708c2cf6cd63e47b2ee32d58" style="width: 100.0%; height: 100.0%;">Apito do meio-dia</div>`)[0];
+                popup_c9dcffce09712680c0b7b45e5b3b8dca.setContent(html_d7bfe224708c2cf6cd63e47b2ee32d58);
+            
+        
+
+        marker_b3770c235757064d724fe65a122738dc.bindPopup(popup_c9dcffce09712680c0b7b45e5b3b8dca)
+        ;
+
+        
+    
+    
+                marker_b3770c235757064d724fe65a122738dc.setIcon(icon_2031fb3c7392407e572df3e766f8d294);
+            
+    
+            var marker_940cf96fd1a96d25351ea6d29649cbce = L.marker(
+                [-21.72694444444444, -43.39611111111111],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_de09e985806868968937e8470ce06444 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_71347d4b83ed7c0df79644b0077f5689 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_85ab19ae6c26324dc11116202b740a51 = $(`<div id="html_85ab19ae6c26324dc11116202b740a51" style="width: 100.0%; height: 100.0%;">Arquibancada do Clube Hípico e Campestre</div>`)[0];
+                popup_71347d4b83ed7c0df79644b0077f5689.setContent(html_85ab19ae6c26324dc11116202b740a51);
+            
+        
+
+        marker_940cf96fd1a96d25351ea6d29649cbce.bindPopup(popup_71347d4b83ed7c0df79644b0077f5689)
+        ;
+
+        
+    
+    
+                marker_940cf96fd1a96d25351ea6d29649cbce.setIcon(icon_de09e985806868968937e8470ce06444);
+            
+    
+            var marker_7e489e6887a103d6470ec0778a18aac0 = L.marker(
+                [-21.759166666666665, -43.343333333333334],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_1b3dfa867fdf97a0355d11c906a37edb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9b47181e75d50d4b0b00334801217d82 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b71977ffafca11c5633008f65612c08d = $(`<div id="html_b71977ffafca11c5633008f65612c08d" style="width: 100.0%; height: 100.0%;">Associação Comercial</div>`)[0];
+                popup_9b47181e75d50d4b0b00334801217d82.setContent(html_b71977ffafca11c5633008f65612c08d);
+            
+        
+
+        marker_7e489e6887a103d6470ec0778a18aac0.bindPopup(popup_9b47181e75d50d4b0b00334801217d82)
+        ;
+
+        
+    
+    
+                marker_7e489e6887a103d6470ec0778a18aac0.setIcon(icon_1b3dfa867fdf97a0355d11c906a37edb);
+            
+    
+            var marker_2243acd7e3160a617be66a0462d9bdb8 = L.marker(
+                [-21.759722222222223, -43.344166666666666],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_7797ea8a8db4190da2571b90fbee3695 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8588eb51bc1ad639cdc3f0d8ac0ed5ad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_689748c5c1525f9a86a3be53e1e711f8 = $(`<div id="html_689748c5c1525f9a86a3be53e1e711f8" style="width: 100.0%; height: 100.0%;">Associação Comercial</div>`)[0];
+                popup_8588eb51bc1ad639cdc3f0d8ac0ed5ad.setContent(html_689748c5c1525f9a86a3be53e1e711f8);
+            
+        
+
+        marker_2243acd7e3160a617be66a0462d9bdb8.bindPopup(popup_8588eb51bc1ad639cdc3f0d8ac0ed5ad)
+        ;
+
+        
+    
+    
+                marker_2243acd7e3160a617be66a0462d9bdb8.setIcon(icon_7797ea8a8db4190da2571b90fbee3695);
+            
+    
+            var marker_f4aa52bb7ac763c139523cd864eced6a = L.marker(
+                [-21.752777777777776, -43.35194444444445],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_1a287d841caf9927a6d32ebbc522fe08 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cc6bb41f764de33e7297ea613c1dfd5d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6370435e08ea565d9af7469549d252f3 = $(`<div id="html_6370435e08ea565d9af7469549d252f3" style="width: 100.0%; height: 100.0%;">Associação Cultural e Beneficente Ítalo Brasileira "Anita Garibaldi"</div>`)[0];
+                popup_cc6bb41f764de33e7297ea613c1dfd5d.setContent(html_6370435e08ea565d9af7469549d252f3);
+            
+        
+
+        marker_f4aa52bb7ac763c139523cd864eced6a.bindPopup(popup_cc6bb41f764de33e7297ea613c1dfd5d)
+        ;
+
+        
+    
+    
+                marker_f4aa52bb7ac763c139523cd864eced6a.setIcon(icon_1a287d841caf9927a6d32ebbc522fe08);
+            
+    
+            var marker_de5d2a8569463c33de1b955db7d716d1 = L.marker(
+                [-21.792222222222225, -43.38472222222222],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_aa689f9878dea0b4967e63f4a961481c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a8d7284c4d7b207294b14483c257f126 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7be50a8f92dc9c90255da62301c95df4 = $(`<div id="html_7be50a8f92dc9c90255da62301c95df4" style="width: 100.0%; height: 100.0%;">Avião Monomotor PP-Gan</div>`)[0];
+                popup_a8d7284c4d7b207294b14483c257f126.setContent(html_7be50a8f92dc9c90255da62301c95df4);
+            
+        
+
+        marker_de5d2a8569463c33de1b955db7d716d1.bindPopup(popup_a8d7284c4d7b207294b14483c257f126)
+        ;
+
+        
+    
+    
+                marker_de5d2a8569463c33de1b955db7d716d1.setIcon(icon_aa689f9878dea0b4967e63f4a961481c);
+            
+    
+            var marker_bbcc21b81ca7f1cc3a3b02bcf89e6c1d = L.marker(
+                [-21.760833333333334, -43.34666666666667],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_3306104c1d512e81c6418d73ce06714d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a35e83f727727af924bebf97f33fa7a6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ccf1e259b90e493e15d71f0d72c4c9e3 = $(`<div id="html_ccf1e259b90e493e15d71f0d72c4c9e3" style="width: 100.0%; height: 100.0%;">Banco ITAÚ, antigo BEMGE</div>`)[0];
+                popup_a35e83f727727af924bebf97f33fa7a6.setContent(html_ccf1e259b90e493e15d71f0d72c4c9e3);
+            
+        
+
+        marker_bbcc21b81ca7f1cc3a3b02bcf89e6c1d.bindPopup(popup_a35e83f727727af924bebf97f33fa7a6)
+        ;
+
+        
+    
+    
+                marker_bbcc21b81ca7f1cc3a3b02bcf89e6c1d.setIcon(icon_3306104c1d512e81c6418d73ce06714d);
+            
+    
+            var marker_d5a88a5964e115af4bf301a27535f14b = L.marker(
+                [-21.7925, -43.36694444444444],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_27bf4ca4611b59fe8b45de978d2b315f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_75c5db75dda0390672cd27c3639c7903 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_86172d3421427f7ac92923dfa9485fe3 = $(`<div id="html_86172d3421427f7ac92923dfa9485fe3" style="width: 100.0%; height: 100.0%;">Bondes no Parque da Lajinha</div>`)[0];
+                popup_75c5db75dda0390672cd27c3639c7903.setContent(html_86172d3421427f7ac92923dfa9485fe3);
+            
+        
+
+        marker_d5a88a5964e115af4bf301a27535f14b.bindPopup(popup_75c5db75dda0390672cd27c3639c7903)
+        ;
+
+        
+    
+    
+                marker_d5a88a5964e115af4bf301a27535f14b.setIcon(icon_27bf4ca4611b59fe8b45de978d2b315f);
+            
+    
+            var marker_42c86edb7285f6cc3709d6af04e801eb = L.marker(
+                [-21.759722222222223, -43.34388888888889],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_d203f898dabe7627ad9c8c0d7b7a63fc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_495d60db80bda04604b48098b458cc59 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_55479778875f2824dfb6cf1397669d42 = $(`<div id="html_55479778875f2824dfb6cf1397669d42" style="width: 100.0%; height: 100.0%;">Busto do Doutor João Penido</div>`)[0];
+                popup_495d60db80bda04604b48098b458cc59.setContent(html_55479778875f2824dfb6cf1397669d42);
+            
+        
+
+        marker_42c86edb7285f6cc3709d6af04e801eb.bindPopup(popup_495d60db80bda04604b48098b458cc59)
+        ;
+
+        
+    
+    
+                marker_42c86edb7285f6cc3709d6af04e801eb.setIcon(icon_d203f898dabe7627ad9c8c0d7b7a63fc);
+            
+    
+            var marker_3fd1808e5c8416635306e41e07177c97 = L.marker(
+                [-21.77111111111111, -43.34638888888889],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_c8201f0126426631ba3f298ddd63e6ee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fd02774bb0cbdac67581f8660b6c70ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d419c0c37b966d060bf0acc9e46394e0 = $(`<div id="html_d419c0c37b966d060bf0acc9e46394e0" style="width: 100.0%; height: 100.0%;">Capela Nosso Senhor dos Passos</div>`)[0];
+                popup_fd02774bb0cbdac67581f8660b6c70ac.setContent(html_d419c0c37b966d060bf0acc9e46394e0);
+            
+        
+
+        marker_3fd1808e5c8416635306e41e07177c97.bindPopup(popup_fd02774bb0cbdac67581f8660b6c70ac)
+        ;
+
+        
+    
+    
+                marker_3fd1808e5c8416635306e41e07177c97.setIcon(icon_c8201f0126426631ba3f298ddd63e6ee);
+            
+    
+            var marker_4beb491ab3d499f47c4dfd27ecace7e7 = L.marker(
+                [-21.7375, -43.367222222222225],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_1d6bef24c6b7b1a05deec9e7972e1d3f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_172133a29975a0173aa9c2f4be3842d6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_be38298d272189ad6f6f345122570053 = $(`<div id="html_be38298d272189ad6f6f345122570053" style="width: 100.0%; height: 100.0%;">Capela de Santa Terezinha</div>`)[0];
+                popup_172133a29975a0173aa9c2f4be3842d6.setContent(html_be38298d272189ad6f6f345122570053);
+            
+        
+
+        marker_4beb491ab3d499f47c4dfd27ecace7e7.bindPopup(popup_172133a29975a0173aa9c2f4be3842d6)
+        ;
+
+        
+    
+    
+                marker_4beb491ab3d499f47c4dfd27ecace7e7.setIcon(icon_1d6bef24c6b7b1a05deec9e7972e1d3f);
+            
+    
+            var marker_8d3dd0baba7691a27f0eaf441e12a66e = L.marker(
+                [-21.764444444444443, -43.34861111111111],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_5f47b4fb9056122a050faff59ebc01ad = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fbaf244364bfe9f3b7d36a69c11e3d7c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a4b2af4d4dd4d59c5592237ff9ceb830 = $(`<div id="html_a4b2af4d4dd4d59c5592237ff9ceb830" style="width: 100.0%; height: 100.0%;">Casa d'Itália</div>`)[0];
+                popup_fbaf244364bfe9f3b7d36a69c11e3d7c.setContent(html_a4b2af4d4dd4d59c5592237ff9ceb830);
+            
+        
+
+        marker_8d3dd0baba7691a27f0eaf441e12a66e.bindPopup(popup_fbaf244364bfe9f3b7d36a69c11e3d7c)
+        ;
+
+        
+    
+    
+                marker_8d3dd0baba7691a27f0eaf441e12a66e.setIcon(icon_5f47b4fb9056122a050faff59ebc01ad);
+            
+    
+            var marker_b001756a7e738c289a8b900f6977b7c2 = L.marker(
+                [-21.708333333333332, -43.38444444444444],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_29ceb98cd3d8d6ba97bca6e6b585e366 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_28e72c84e97d4739d092163b4708396f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_540c86922cb031efc5688db411c76f4b = $(`<div id="html_540c86922cb031efc5688db411c76f4b" style="width: 100.0%; height: 100.0%;">Casa-sede da Fazenda Ribeirão das Rosas</div>`)[0];
+                popup_28e72c84e97d4739d092163b4708396f.setContent(html_540c86922cb031efc5688db411c76f4b);
+            
+        
+
+        marker_b001756a7e738c289a8b900f6977b7c2.bindPopup(popup_28e72c84e97d4739d092163b4708396f)
+        ;
+
+        
+    
+    
+                marker_b001756a7e738c289a8b900f6977b7c2.setIcon(icon_29ceb98cd3d8d6ba97bca6e6b585e366);
+            
+    
+            var marker_1a7c2413880cafc4139e84bca8a6aaef = L.marker(
+                [-21.76388888888889, -43.341944444444444],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_cb171f95bce7eed518f279293ad6a5a9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_42abc89c6645185da827248eee59deca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_300425a6146dbe69466aca1747a6dc13 = $(`<div id="html_300425a6146dbe69466aca1747a6dc13" style="width: 100.0%; height: 100.0%;">Castelinho dos Bracher</div>`)[0];
+                popup_42abc89c6645185da827248eee59deca.setContent(html_300425a6146dbe69466aca1747a6dc13);
+            
+        
+
+        marker_1a7c2413880cafc4139e84bca8a6aaef.bindPopup(popup_42abc89c6645185da827248eee59deca)
+        ;
+
+        
+    
+    
+                marker_1a7c2413880cafc4139e84bca8a6aaef.setIcon(icon_cb171f95bce7eed518f279293ad6a5a9);
+            
+    
+            var marker_10333347c6e1e70b31cdc6dc7daf9454 = L.marker(
+                [-21.771666666666665, -43.34722222222222],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_bcabe6469923d8c240549533d3ff3a42 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_388caa6bbfc7642cf3463a32b6044807 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3e6c3c213b74f9ce7d29cf4437c91d11 = $(`<div id="html_3e6c3c213b74f9ce7d29cf4437c91d11" style="width: 100.0%; height: 100.0%;">Centro de Estudos Murilo Mendes</div>`)[0];
+                popup_388caa6bbfc7642cf3463a32b6044807.setContent(html_3e6c3c213b74f9ce7d29cf4437c91d11);
+            
+        
+
+        marker_10333347c6e1e70b31cdc6dc7daf9454.bindPopup(popup_388caa6bbfc7642cf3463a32b6044807)
+        ;
+
+        
+    
+    
+                marker_10333347c6e1e70b31cdc6dc7daf9454.setIcon(icon_bcabe6469923d8c240549533d3ff3a42);
+            
+    
+            var marker_aa40b2fb0f271843b5845c63cc9866c7 = L.marker(
+                [-21.760833333333334, -43.346944444444446],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_6d45555ed63ffc996f403aa01c1ccfa5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_379a6ada502fcdec2e570adb87828019 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5f7055f8df5afbfe20fec2a0bb594c73 = $(`<div id="html_5f7055f8df5afbfe20fec2a0bb594c73" style="width: 100.0%; height: 100.0%;">Cine Palace</div>`)[0];
+                popup_379a6ada502fcdec2e570adb87828019.setContent(html_5f7055f8df5afbfe20fec2a0bb594c73);
+            
+        
+
+        marker_aa40b2fb0f271843b5845c63cc9866c7.bindPopup(popup_379a6ada502fcdec2e570adb87828019)
+        ;
+
+        
+    
+    
+                marker_aa40b2fb0f271843b5845c63cc9866c7.setIcon(icon_6d45555ed63ffc996f403aa01c1ccfa5);
+            
+    
+            var marker_ccb38521ba6d57718018507bceb5aeb1 = L.marker(
+                [-21.760277777777777, -43.343333333333334],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_814035c470855c0d5e59228190614464 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9523ce66829dcfd81efae405975ca0f4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3938fcaa421e7e3ccab6386b4c74770c = $(`<div id="html_3938fcaa421e7e3ccab6386b4c74770c" style="width: 100.0%; height: 100.0%;">Cine São Luiz</div>`)[0];
+                popup_9523ce66829dcfd81efae405975ca0f4.setContent(html_3938fcaa421e7e3ccab6386b4c74770c);
+            
+        
+
+        marker_ccb38521ba6d57718018507bceb5aeb1.bindPopup(popup_9523ce66829dcfd81efae405975ca0f4)
+        ;
+
+        
+    
+    
+                marker_ccb38521ba6d57718018507bceb5aeb1.setIcon(icon_814035c470855c0d5e59228190614464);
+            
+    
+            var marker_bba3ab57517d45ee68312ba8225e743c = L.marker(
+                [-21.761388888888888, -43.34777777777778],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_6bb4ea75b6e11031c24545f06d631399 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_934d19d6e93df201d949eb7f346006fa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7e54631c537529a7ad5d3b191073e8dc = $(`<div id="html_7e54631c537529a7ad5d3b191073e8dc" style="width: 100.0%; height: 100.0%;">Cine-Theatro Central</div>`)[0];
+                popup_934d19d6e93df201d949eb7f346006fa.setContent(html_7e54631c537529a7ad5d3b191073e8dc);
+            
+        
+
+        marker_bba3ab57517d45ee68312ba8225e743c.bindPopup(popup_934d19d6e93df201d949eb7f346006fa)
+        ;
+
+        
+    
+    
+                marker_bba3ab57517d45ee68312ba8225e743c.setIcon(icon_6bb4ea75b6e11031c24545f06d631399);
+            
+    
+            var marker_4fdf6c6b09a20c5e170b4299a97ee831 = L.marker(
+                [-21.75861111111111, -43.35027777777778],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_4e2323d07d4b8917fe4f65f4130dd91c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d4d759b035031dd2cd81cae5d9bc03bc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9be22469fc44b44790c846a1aa6d74d1 = $(`<div id="html_9be22469fc44b44790c846a1aa6d74d1" style="width: 100.0%; height: 100.0%;">Cinema Excelsior</div>`)[0];
+                popup_d4d759b035031dd2cd81cae5d9bc03bc.setContent(html_9be22469fc44b44790c846a1aa6d74d1);
+            
+        
+
+        marker_4fdf6c6b09a20c5e170b4299a97ee831.bindPopup(popup_d4d759b035031dd2cd81cae5d9bc03bc)
+        ;
+
+        
+    
+    
+                marker_4fdf6c6b09a20c5e170b4299a97ee831.setIcon(icon_4e2323d07d4b8917fe4f65f4130dd91c);
+            
+    
+            var marker_49bc96d6234c770208313ffab1b0020e = L.marker(
+                [-21.742222222222225, -43.37361111111111],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_3701b4153dbd8e5a151880286f9cb02d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3e6807744ecf9279d4d9d91bf8320cff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eff94a83149d0071df19b8660c1cf241 = $(`<div id="html_eff94a83149d0071df19b8660c1cf241" style="width: 100.0%; height: 100.0%;">Companhia Mineira de Energia</div>`)[0];
+                popup_3e6807744ecf9279d4d9d91bf8320cff.setContent(html_eff94a83149d0071df19b8660c1cf241);
+            
+        
+
+        marker_49bc96d6234c770208313ffab1b0020e.bindPopup(popup_3e6807744ecf9279d4d9d91bf8320cff)
+        ;
+
+        
+    
+    
+                marker_49bc96d6234c770208313ffab1b0020e.setIcon(icon_3701b4153dbd8e5a151880286f9cb02d);
+            
+    
+            var marker_5fac14c3a56926b58e5f1592b929f174 = L.marker(
+                [-21.748333333333335, -43.356944444444444],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_cbeabcf5affe278bd39574d2b7e5713d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5f2fe6abc91c4487e56e42cce14550cb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_632a72a741bce3a40c468f8478ada753 = $(`<div id="html_632a72a741bce3a40c468f8478ada753" style="width: 100.0%; height: 100.0%;">Conjunto Arquitetônico e Paisagístico do Colégio Santa Catarina</div>`)[0];
+                popup_5f2fe6abc91c4487e56e42cce14550cb.setContent(html_632a72a741bce3a40c468f8478ada753);
+            
+        
+
+        marker_5fac14c3a56926b58e5f1592b929f174.bindPopup(popup_5f2fe6abc91c4487e56e42cce14550cb)
+        ;
+
+        
+    
+    
+                marker_5fac14c3a56926b58e5f1592b929f174.setIcon(icon_cbeabcf5affe278bd39574d2b7e5713d);
+            
+    
+            var marker_1b668673c389e1c2d06bda62915881dd = L.marker(
+                [-21.76722222222222, -43.344722222222224],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_270483f7534f37c25ed6806ea1a15eab = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6089aa156611b68f1f127d1a89ea1489 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7980360c233a181ece92db6f3776e81e = $(`<div id="html_7980360c233a181ece92db6f3776e81e" style="width: 100.0%; height: 100.0%;">Conjunto Paisagístico do Instituto Granbery</div>`)[0];
+                popup_6089aa156611b68f1f127d1a89ea1489.setContent(html_7980360c233a181ece92db6f3776e81e);
+            
+        
+
+        marker_1b668673c389e1c2d06bda62915881dd.bindPopup(popup_6089aa156611b68f1f127d1a89ea1489)
+        ;
+
+        
+    
+    
+                marker_1b668673c389e1c2d06bda62915881dd.setIcon(icon_270483f7534f37c25ed6806ea1a15eab);
+            
+    
+            var marker_ae48ea4da22c41c156059f08f266c8ec = L.marker(
+                [-21.759722222222223, -43.34388888888889],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_dbc46f1b7505a5cc5337a3fa112c1751 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c9703af42f773f3ae3c1be906b989f03 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d932c6eeb7b0fcaacc3d3c1bb17ea397 = $(`<div id="html_d932c6eeb7b0fcaacc3d3c1bb17ea397" style="width: 100.0%; height: 100.0%;">Conjunto da Praça da Estação</div>`)[0];
+                popup_c9703af42f773f3ae3c1be906b989f03.setContent(html_d932c6eeb7b0fcaacc3d3c1bb17ea397);
+            
+        
+
+        marker_ae48ea4da22c41c156059f08f266c8ec.bindPopup(popup_c9703af42f773f3ae3c1be906b989f03)
+        ;
+
+        
+    
+    
+                marker_ae48ea4da22c41c156059f08f266c8ec.setIcon(icon_dbc46f1b7505a5cc5337a3fa112c1751);
+            
+    
+            var marker_151a7a65e1c435d0c8fbeacefa28bcbc = L.marker(
+                [-21.761111111111113, -43.35055555555556],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_eb5bb1d689c3f0a0c4f4014bdd218ade = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b633aaa0f6c147f16f46267fc80fdc9e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_53e32086500dd50866b0481a1543bd94 = $(`<div id="html_53e32086500dd50866b0481a1543bd94" style="width: 100.0%; height: 100.0%;">Conjunto do Parque Halfeld</div>`)[0];
+                popup_b633aaa0f6c147f16f46267fc80fdc9e.setContent(html_53e32086500dd50866b0481a1543bd94);
+            
+        
+
+        marker_151a7a65e1c435d0c8fbeacefa28bcbc.bindPopup(popup_b633aaa0f6c147f16f46267fc80fdc9e)
+        ;
+
+        
+    
+    
+                marker_151a7a65e1c435d0c8fbeacefa28bcbc.setIcon(icon_eb5bb1d689c3f0a0c4f4014bdd218ade);
+            
+    
+            var marker_ce875fc981827ce3ad65f0e7b1fd8339 = L.marker(
+                [-21.760833333333334, -43.349722222222226],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_2d9a263e3352a23857ef104da3de586e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_23939afabf779767c9b24a77eaa1a046 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7dae6b9dbda557a018a1f1be1380f535 = $(`<div id="html_7dae6b9dbda557a018a1f1be1380f535" style="width: 100.0%; height: 100.0%;">Edifício CIAMPI</div>`)[0];
+                popup_23939afabf779767c9b24a77eaa1a046.setContent(html_7dae6b9dbda557a018a1f1be1380f535);
+            
+        
+
+        marker_ce875fc981827ce3ad65f0e7b1fd8339.bindPopup(popup_23939afabf779767c9b24a77eaa1a046)
+        ;
+
+        
+    
+    
+                marker_ce875fc981827ce3ad65f0e7b1fd8339.setIcon(icon_2d9a263e3352a23857ef104da3de586e);
+            
+    
+            var marker_5758e7c3c9ed0db4706572601066c335 = L.marker(
+                [-21.754444444444445, -43.35305555555556],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_57a04caa53b00b67e5cf2333918e279c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9a4e00529e1b79751767e19560b742ec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fcdc89e91bec150e693a9f264571aeea = $(`<div id="html_fcdc89e91bec150e693a9f264571aeea" style="width: 100.0%; height: 100.0%;">Edifício Jesus de Oliveira</div>`)[0];
+                popup_9a4e00529e1b79751767e19560b742ec.setContent(html_fcdc89e91bec150e693a9f264571aeea);
+            
+        
+
+        marker_5758e7c3c9ed0db4706572601066c335.bindPopup(popup_9a4e00529e1b79751767e19560b742ec)
+        ;
+
+        
+    
+    
+                marker_5758e7c3c9ed0db4706572601066c335.setIcon(icon_57a04caa53b00b67e5cf2333918e279c);
+            
+    
+            var marker_9ae08342834dd54a05d132f824cdb34b = L.marker(
+                [-21.76, -43.343611111111116],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_21b5994c7694e052ffb5f29b17c670bb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_23b85efef789d4a046f2be3071a64b07 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9a3fe4c8913a61d24bc137d6e09aac71 = $(`<div id="html_9a3fe4c8913a61d24bc137d6e09aac71" style="width: 100.0%; height: 100.0%;">Edifício Wagner Pereira</div>`)[0];
+                popup_23b85efef789d4a046f2be3071a64b07.setContent(html_9a3fe4c8913a61d24bc137d6e09aac71);
+            
+        
+
+        marker_9ae08342834dd54a05d132f824cdb34b.bindPopup(popup_23b85efef789d4a046f2be3071a64b07)
+        ;
+
+        
+    
+    
+                marker_9ae08342834dd54a05d132f824cdb34b.setIcon(icon_21b5994c7694e052ffb5f29b17c670bb);
+            
+    
+            var marker_b0cbb4b7d1a977b1fa06f4fa6750e0cd = L.marker(
+                [-21.761666666666667, -43.35027777777778],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_065412fb0b4a63d929e1f69ab76bd08e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b0fcb3592ece320fc240b5350c5ef9d9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c0e24bf3b4ae8340126c27fc0b39c9c6 = $(`<div id="html_c0e24bf3b4ae8340126c27fc0b39c9c6" style="width: 100.0%; height: 100.0%;">Edifício do antigo Fórum – atual Câmara Municipal</div>`)[0];
+                popup_b0fcb3592ece320fc240b5350c5ef9d9.setContent(html_c0e24bf3b4ae8340126c27fc0b39c9c6);
+            
+        
+
+        marker_b0cbb4b7d1a977b1fa06f4fa6750e0cd.bindPopup(popup_b0fcb3592ece320fc240b5350c5ef9d9)
+        ;
+
+        
+    
+    
+                marker_b0cbb4b7d1a977b1fa06f4fa6750e0cd.setIcon(icon_065412fb0b4a63d929e1f69ab76bd08e);
+            
+    
+            var marker_7816e24c5fd384c06e9b78c14213d7fc = L.marker(
+                [-21.763333333333332, -43.348888888888894],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_56502403e5aa66c4152092de0864429b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_93f8f791040cfe31c35a5d4e1e39fa28 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8941e8fa51a17fe6565ce80b6aa0fc52 = $(`<div id="html_8941e8fa51a17fe6565ce80b6aa0fc52" style="width: 100.0%; height: 100.0%;">Edifício dos "Grupos Centrais"</div>`)[0];
+                popup_93f8f791040cfe31c35a5d4e1e39fa28.setContent(html_8941e8fa51a17fe6565ce80b6aa0fc52);
+            
+        
+
+        marker_7816e24c5fd384c06e9b78c14213d7fc.bindPopup(popup_93f8f791040cfe31c35a5d4e1e39fa28)
+        ;
+
+        
+    
+    
+                marker_7816e24c5fd384c06e9b78c14213d7fc.setIcon(icon_56502403e5aa66c4152092de0864429b);
+            
+    
+            var marker_e388c6a56f6a57481e10001f53189e56 = L.marker(
+                [-21.76, -43.348888888888894],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_e2a236e58195d009d0dfe85a338d4a28 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a603d46df26c52444cb7ddca1d2d59e6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2f15a60b6afb3f16eda5f5458283f0cf = $(`<div id="html_2f15a60b6afb3f16eda5f5458283f0cf" style="width: 100.0%; height: 100.0%;">Edifício sede da Agência da Empresa Brasileira de Correios e Telégrafos de Juiz de Fora</div>`)[0];
+                popup_a603d46df26c52444cb7ddca1d2d59e6.setContent(html_2f15a60b6afb3f16eda5f5458283f0cf);
+            
+        
+
+        marker_e388c6a56f6a57481e10001f53189e56.bindPopup(popup_a603d46df26c52444cb7ddca1d2d59e6)
+        ;
+
+        
+    
+    
+                marker_e388c6a56f6a57481e10001f53189e56.setIcon(icon_e2a236e58195d009d0dfe85a338d4a28);
+            
+    
+            var marker_e1d5a71b3f19d743ced5b8b4a314b22e = L.marker(
+                [-21.77111111111111, -43.347500000000004],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_63401d86a35c7e1dc9b93ad6af757feb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7332207a7771fe79246184e5d645f0db = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_69b3cdbac797657ddc6c5f332c73754f = $(`<div id="html_69b3cdbac797657ddc6c5f332c73754f" style="width: 100.0%; height: 100.0%;">Escola Estadual Duque de Caxias</div>`)[0];
+                popup_7332207a7771fe79246184e5d645f0db.setContent(html_69b3cdbac797657ddc6c5f332c73754f);
+            
+        
+
+        marker_e1d5a71b3f19d743ced5b8b4a314b22e.bindPopup(popup_7332207a7771fe79246184e5d645f0db)
+        ;
+
+        
+    
+    
+                marker_e1d5a71b3f19d743ced5b8b4a314b22e.setIcon(icon_63401d86a35c7e1dc9b93ad6af757feb);
+            
+    
+            var marker_cea2f32347a6ef24bcc0357ff6749d22 = L.marker(
+                [-21.7625, -43.34305555555556],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_7133fd1a55b552b84a540ba7f96dc4f8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ca3cf8b9cdff9a947a7f64a9e1382ee6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_03e361dff8bbf88103b0e49de7f5a86f = $(`<div id="html_03e361dff8bbf88103b0e49de7f5a86f" style="width: 100.0%; height: 100.0%;">Escola Normal</div>`)[0];
+                popup_ca3cf8b9cdff9a947a7f64a9e1382ee6.setContent(html_03e361dff8bbf88103b0e49de7f5a86f);
+            
+        
+
+        marker_cea2f32347a6ef24bcc0357ff6749d22.bindPopup(popup_ca3cf8b9cdff9a947a7f64a9e1382ee6)
+        ;
+
+        
+    
+    
+                marker_cea2f32347a6ef24bcc0357ff6749d22.setIcon(icon_7133fd1a55b552b84a540ba7f96dc4f8);
+            
+    
+            var marker_38ae3af821b9469dd0840dcd5f80e36d = L.marker(
+                [-21.758055555555554, -43.60111111111111],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_98bcc1a37528a016b9bc60b09ec99e2e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2d166a4a12d29cb33212c80ac1ac35ef = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_870a754b03ca1319ece6615d18744b5f = $(`<div id="html_870a754b03ca1319ece6615d18744b5f" style="width: 100.0%; height: 100.0%;">Estação Ferroviária de Valadares</div>`)[0];
+                popup_2d166a4a12d29cb33212c80ac1ac35ef.setContent(html_870a754b03ca1319ece6615d18744b5f);
+            
+        
+
+        marker_38ae3af821b9469dd0840dcd5f80e36d.bindPopup(popup_2d166a4a12d29cb33212c80ac1ac35ef)
+        ;
+
+        
+    
+    
+                marker_38ae3af821b9469dd0840dcd5f80e36d.setIcon(icon_98bcc1a37528a016b9bc60b09ec99e2e);
+            
+    
+            var marker_50b4edb81c15006f8a65476774bec6c2 = L.marker(
+                [-21.747777777777777, -43.361111111111114],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_14cfb909731dbdf12c2236b1157b5de4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9b64d2a5677e4e7e41fc3ac73a966742 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_810111b31344822d9dace6dd138ee1e8 = $(`<div id="html_810111b31344822d9dace6dd138ee1e8" style="width: 100.0%; height: 100.0%;">Estação Mariano Procópio</div>`)[0];
+                popup_9b64d2a5677e4e7e41fc3ac73a966742.setContent(html_810111b31344822d9dace6dd138ee1e8);
+            
+        
+
+        marker_50b4edb81c15006f8a65476774bec6c2.bindPopup(popup_9b64d2a5677e4e7e41fc3ac73a966742)
+        ;
+
+        
+    
+    
+                marker_50b4edb81c15006f8a65476774bec6c2.setIcon(icon_14cfb909731dbdf12c2236b1157b5de4);
+            
+    
+            var marker_56205d3a90423bde8441f8a8e42086ff = L.marker(
+                [-21.763333333333332, -43.350833333333334],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_0f4eab3af1bee47b09f2bd5707f6308c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6196e1c6f38f55072ed08d448692f847 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_279e2d90eee6d7baa0dfed58b41048b8 = $(`<div id="html_279e2d90eee6d7baa0dfed58b41048b8" style="width: 100.0%; height: 100.0%;">Fórum da Cultura</div>`)[0];
+                popup_6196e1c6f38f55072ed08d448692f847.setContent(html_279e2d90eee6d7baa0dfed58b41048b8);
+            
+        
+
+        marker_56205d3a90423bde8441f8a8e42086ff.bindPopup(popup_6196e1c6f38f55072ed08d448692f847)
+        ;
+
+        
+    
+    
+                marker_56205d3a90423bde8441f8a8e42086ff.setIcon(icon_0f4eab3af1bee47b09f2bd5707f6308c);
+            
+    
+            var marker_4234a4dc7b7ac206693145b262630672 = L.marker(
+                [-21.761388888888888, -43.34805555555556],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_5edde8a1e0d973037a15f9e3732639a4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_18ede62e158204de4fcc2a605fb84e19 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dac65728987e7b2904bb62a24850278a = $(`<div id="html_dac65728987e7b2904bb62a24850278a" style="width: 100.0%; height: 100.0%;">Galeria Ali Halfeld</div>`)[0];
+                popup_18ede62e158204de4fcc2a605fb84e19.setContent(html_dac65728987e7b2904bb62a24850278a);
+            
+        
+
+        marker_4234a4dc7b7ac206693145b262630672.bindPopup(popup_18ede62e158204de4fcc2a605fb84e19)
+        ;
+
+        
+    
+    
+                marker_4234a4dc7b7ac206693145b262630672.setIcon(icon_5edde8a1e0d973037a15f9e3732639a4);
+            
+    
+            var marker_f196febcaa81fc4940de670a71883708 = L.marker(
+                [-21.761388888888888, -43.34805555555556],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_a95dfa77d5023559f4c81b8c152310ab = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e0c9a2a143c6499e7afe71b9733157c4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_82d5c88fdb3bb30bf74d4e83718b8f91 = $(`<div id="html_82d5c88fdb3bb30bf74d4e83718b8f91" style="width: 100.0%; height: 100.0%;">Galeria Azarias Vilela</div>`)[0];
+                popup_e0c9a2a143c6499e7afe71b9733157c4.setContent(html_82d5c88fdb3bb30bf74d4e83718b8f91);
+            
+        
+
+        marker_f196febcaa81fc4940de670a71883708.bindPopup(popup_e0c9a2a143c6499e7afe71b9733157c4)
+        ;
+
+        
+    
+    
+                marker_f196febcaa81fc4940de670a71883708.setIcon(icon_a95dfa77d5023559f4c81b8c152310ab);
+            
+    
+            var marker_3db0dfcdf3c04fdc57962486092d9f06 = L.marker(
+                [-21.76, -43.344166666666666],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_5097624e0f9d7998fea947a890a63a96 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d3ed77c11ef017edef2993fa73d15591 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1f547ac8cc6af2dc570fcac454a38e65 = $(`<div id="html_1f547ac8cc6af2dc570fcac454a38e65" style="width: 100.0%; height: 100.0%;">Hotel Príncipe</div>`)[0];
+                popup_d3ed77c11ef017edef2993fa73d15591.setContent(html_1f547ac8cc6af2dc570fcac454a38e65);
+            
+        
+
+        marker_3db0dfcdf3c04fdc57962486092d9f06.bindPopup(popup_d3ed77c11ef017edef2993fa73d15591)
+        ;
+
+        
+    
+    
+                marker_3db0dfcdf3c04fdc57962486092d9f06.setIcon(icon_5097624e0f9d7998fea947a890a63a96);
+            
+    
+            var marker_7a86097a2b04a5117e735107ffacd24e = L.marker(
+                [-21.760277777777777, -43.345],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_5874b98105b34bc9d9ab9d196ad996f4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1c9ddf1db9603929f6cfd8a03246847b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3d102f1e7e6a3d24d7c6f9b25435a72e = $(`<div id="html_3d102f1e7e6a3d24d7c6f9b25435a72e" style="width: 100.0%; height: 100.0%;">Hotel São Luis</div>`)[0];
+                popup_1c9ddf1db9603929f6cfd8a03246847b.setContent(html_3d102f1e7e6a3d24d7c6f9b25435a72e);
+            
+        
+
+        marker_7a86097a2b04a5117e735107ffacd24e.bindPopup(popup_1c9ddf1db9603929f6cfd8a03246847b)
+        ;
+
+        
+    
+    
+                marker_7a86097a2b04a5117e735107ffacd24e.setIcon(icon_5874b98105b34bc9d9ab9d196ad996f4);
+            
+    
+            var marker_4bb1ef7af14f3bbcdd2cc6d4a6329702 = L.marker(
+                [-21.75027777777778, -43.35583333333334],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_88f5d4ea1e0472df31c02d01277073df = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6c68ec4a7d2acfd3cdc8040724e9f20b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5d5668d3be565b60a3b1e3bca648ef1d = $(`<div id="html_5d5668d3be565b60a3b1e3bca648ef1d" style="width: 100.0%; height: 100.0%;">Igreja Nossa Senhora da Glória</div>`)[0];
+                popup_6c68ec4a7d2acfd3cdc8040724e9f20b.setContent(html_5d5668d3be565b60a3b1e3bca648ef1d);
+            
+        
+
+        marker_4bb1ef7af14f3bbcdd2cc6d4a6329702.bindPopup(popup_6c68ec4a7d2acfd3cdc8040724e9f20b)
+        ;
+
+        
+    
+    
+                marker_4bb1ef7af14f3bbcdd2cc6d4a6329702.setIcon(icon_88f5d4ea1e0472df31c02d01277073df);
+            
+    
+            var marker_3c5a1a48996c004d5d4a1252a25396d4 = L.marker(
+                [-21.81277777777778, -43.263333333333335],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_976493085f307cf89b98906f7bf34882 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5a58d8d08586887079303aec20f2cbc0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ec9182591646d13216b90ac0fd3cf6de = $(`<div id="html_ec9182591646d13216b90ac0fd3cf6de" style="width: 100.0%; height: 100.0%;">Igreja de São Francisco e seus altares e santos</div>`)[0];
+                popup_5a58d8d08586887079303aec20f2cbc0.setContent(html_ec9182591646d13216b90ac0fd3cf6de);
+            
+        
+
+        marker_3c5a1a48996c004d5d4a1252a25396d4.bindPopup(popup_5a58d8d08586887079303aec20f2cbc0)
+        ;
+
+        
+    
+    
+                marker_3c5a1a48996c004d5d4a1252a25396d4.setIcon(icon_976493085f307cf89b98906f7bf34882);
+            
+    
+            var marker_8ef50350e7d1613ac007953acd5fb71f = L.marker(
+                [-21.752777777777776, -43.35305555555556],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_923efa7f8737f6be7caf78211ea9dac8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_65aae12c925f1f235f8fe7ebd27a82c5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b2ef3e8bdeaa294c9835fea66307ff0d = $(`<div id="html_b2ef3e8bdeaa294c9835fea66307ff0d" style="width: 100.0%; height: 100.0%;">Igreja de São Roque</div>`)[0];
+                popup_65aae12c925f1f235f8fe7ebd27a82c5.setContent(html_b2ef3e8bdeaa294c9835fea66307ff0d);
+            
+        
+
+        marker_8ef50350e7d1613ac007953acd5fb71f.bindPopup(popup_65aae12c925f1f235f8fe7ebd27a82c5)
+        ;
+
+        
+    
+    
+                marker_8ef50350e7d1613ac007953acd5fb71f.setIcon(icon_923efa7f8737f6be7caf78211ea9dac8);
+            
+    
+            var marker_35610d8d382daab8660c563fcca59959 = L.marker(
+                [-21.74388888888889, -43.35416666666667],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_6db48e9db40fa1802e4bd99b62fced3e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_714c814da5d92e7750ab5021ab746ab6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e1d7e52302afacf0c6f00011475d4a7c = $(`<div id="html_e1d7e52302afacf0c6f00011475d4a7c" style="width: 100.0%; height: 100.0%;">Monumento Alfredo Lage</div>`)[0];
+                popup_714c814da5d92e7750ab5021ab746ab6.setContent(html_e1d7e52302afacf0c6f00011475d4a7c);
+            
+        
+
+        marker_35610d8d382daab8660c563fcca59959.bindPopup(popup_714c814da5d92e7750ab5021ab746ab6)
+        ;
+
+        
+    
+    
+                marker_35610d8d382daab8660c563fcca59959.setIcon(icon_6db48e9db40fa1802e4bd99b62fced3e);
+            
+    
+            var marker_196beb91260007ed77c855933cb7e30e = L.marker(
+                [-21.758333333333333, -43.35583333333334],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_1b0a3aa22c067c9ae4d241a45bb5e7e4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a707786517fcf386d57847326eabf5eb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_87f8fe15ddebc81ed0ddd9e4dad7dabc = $(`<div id="html_87f8fe15ddebc81ed0ddd9e4dad7dabc" style="width: 100.0%; height: 100.0%;">Monumento Antônio Firjan</div>`)[0];
+                popup_a707786517fcf386d57847326eabf5eb.setContent(html_87f8fe15ddebc81ed0ddd9e4dad7dabc);
+            
+        
+
+        marker_196beb91260007ed77c855933cb7e30e.bindPopup(popup_a707786517fcf386d57847326eabf5eb)
+        ;
+
+        
+    
+    
+                marker_196beb91260007ed77c855933cb7e30e.setIcon(icon_1b0a3aa22c067c9ae4d241a45bb5e7e4);
+            
+    
+            var marker_a633179de8ba2c5efe5750ab1036b291 = L.marker(
+                [-21.761388888888888, -43.35027777777778],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_a8baf26bfd1ded3df769120c22570718 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ca2c2a4c0f78d78c5761ca3d78a5a737 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e1f7b73e4de1f35630b24cdb584402a9 = $(`<div id="html_e1f7b73e4de1f35630b24cdb584402a9" style="width: 100.0%; height: 100.0%;">Monumento Belmiro Braga</div>`)[0];
+                popup_ca2c2a4c0f78d78c5761ca3d78a5a737.setContent(html_e1f7b73e4de1f35630b24cdb584402a9);
+            
+        
+
+        marker_a633179de8ba2c5efe5750ab1036b291.bindPopup(popup_ca2c2a4c0f78d78c5761ca3d78a5a737)
+        ;
+
+        
+    
+    
+                marker_a633179de8ba2c5efe5750ab1036b291.setIcon(icon_a8baf26bfd1ded3df769120c22570718);
+            
+    
+            var marker_f0218783e20e73aa044532b4c75ce1a3 = L.marker(
+                [-21.761944444444445, -43.34388888888889],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_c8b1bdd60e29527bd6f4a180f9e31b9d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4ed0625d98f20702d6f8c5539352a28c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_291311e37a548e51e7fb8006bf0dfa29 = $(`<div id="html_291311e37a548e51e7fb8006bf0dfa29" style="width: 100.0%; height: 100.0%;">Monumento Bernardo Mascarenhas</div>`)[0];
+                popup_4ed0625d98f20702d6f8c5539352a28c.setContent(html_291311e37a548e51e7fb8006bf0dfa29);
+            
+        
+
+        marker_f0218783e20e73aa044532b4c75ce1a3.bindPopup(popup_4ed0625d98f20702d6f8c5539352a28c)
+        ;
+
+        
+    
+    
+                marker_f0218783e20e73aa044532b4c75ce1a3.setIcon(icon_c8b1bdd60e29527bd6f4a180f9e31b9d);
+            
+    
+            var marker_43bc0066ab283b50aeaf87b0cb8ae83f = L.marker(
+                [-21.760833333333334, -43.35],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_a8277b468fd446fc51e5762df17e2833 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fffab30554df7051b7b125cacbedd44e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a06c3c2b610f1e522add4c9d5f81e941 = $(`<div id="html_a06c3c2b610f1e522add4c9d5f81e941" style="width: 100.0%; height: 100.0%;">Monumento Camões</div>`)[0];
+                popup_fffab30554df7051b7b125cacbedd44e.setContent(html_a06c3c2b610f1e522add4c9d5f81e941);
+            
+        
+
+        marker_43bc0066ab283b50aeaf87b0cb8ae83f.bindPopup(popup_fffab30554df7051b7b125cacbedd44e)
+        ;
+
+        
+    
+    
+                marker_43bc0066ab283b50aeaf87b0cb8ae83f.setIcon(icon_a8277b468fd446fc51e5762df17e2833);
+            
+    
+            var marker_59515a4e5952939b126d8df5ca91883f = L.marker(
+                [-21.758333333333333, -43.355555555555554],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_61e555fad0724db11f862be2eb3731ec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ff50939b16b4e1bbfa2edf0e090ea442 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3e23cc939e8da00fffaeeaaf2a402b4b = $(`<div id="html_3e23cc939e8da00fffaeeaaf2a402b4b" style="width: 100.0%; height: 100.0%;">Monumento Dilermando Cruz</div>`)[0];
+                popup_ff50939b16b4e1bbfa2edf0e090ea442.setContent(html_3e23cc939e8da00fffaeeaaf2a402b4b);
+            
+        
+
+        marker_59515a4e5952939b126d8df5ca91883f.bindPopup(popup_ff50939b16b4e1bbfa2edf0e090ea442)
+        ;
+
+        
+    
+    
+                marker_59515a4e5952939b126d8df5ca91883f.setIcon(icon_61e555fad0724db11f862be2eb3731ec);
+            
+    
+            var marker_ed405a08e4efe7373e00fe56f2b2fb33 = L.marker(
+                [-21.76388888888889, -43.349444444444444],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_63ae2a717371eb1880885eb29f56342b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5193553dc94adeb4edd536ffc5db3fe7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ba6ba82e78b8b5ac03eba6e046fa8d52 = $(`<div id="html_ba6ba82e78b8b5ac03eba6e046fa8d52" style="width: 100.0%; height: 100.0%;">Monumento Dom Justino</div>`)[0];
+                popup_5193553dc94adeb4edd536ffc5db3fe7.setContent(html_ba6ba82e78b8b5ac03eba6e046fa8d52);
+            
+        
+
+        marker_ed405a08e4efe7373e00fe56f2b2fb33.bindPopup(popup_5193553dc94adeb4edd536ffc5db3fe7)
+        ;
+
+        
+    
+    
+                marker_ed405a08e4efe7373e00fe56f2b2fb33.setIcon(icon_63ae2a717371eb1880885eb29f56342b);
+            
+    
+            var marker_59565961420b196d1adfa9acf9cf54e4 = L.marker(
+                [-21.747222222222224, -43.35583333333334],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_11a31f0bb2e2e8d95200acad1c462519 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2d82e48509600d761b30da2da583f029 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d9cd7f7da295fed575cef33f58925b69 = $(`<div id="html_d9cd7f7da295fed575cef33f58925b69" style="width: 100.0%; height: 100.0%;">Monumento Dom Lasagna</div>`)[0];
+                popup_2d82e48509600d761b30da2da583f029.setContent(html_d9cd7f7da295fed575cef33f58925b69);
+            
+        
+
+        marker_59565961420b196d1adfa9acf9cf54e4.bindPopup(popup_2d82e48509600d761b30da2da583f029)
+        ;
+
+        
+    
+    
+                marker_59565961420b196d1adfa9acf9cf54e4.setIcon(icon_11a31f0bb2e2e8d95200acad1c462519);
+            
+    
+            var marker_3b7774a7cf07c5fcc842163bb74563a9 = L.marker(
+                [-21.756944444444443, -43.35055555555556],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_3fe4d0dbc62489d08e555348ac218c19 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_391cb24f4b71dc71a6b15cdea1e5ea62 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9fd5c06917d748b5395512ac3d27591a = $(`<div id="html_9fd5c06917d748b5395512ac3d27591a" style="width: 100.0%; height: 100.0%;">Monumento Getúlio Vargas</div>`)[0];
+                popup_391cb24f4b71dc71a6b15cdea1e5ea62.setContent(html_9fd5c06917d748b5395512ac3d27591a);
+            
+        
+
+        marker_3b7774a7cf07c5fcc842163bb74563a9.bindPopup(popup_391cb24f4b71dc71a6b15cdea1e5ea62)
+        ;
+
+        
+    
+    
+                marker_3b7774a7cf07c5fcc842163bb74563a9.setIcon(icon_3fe4d0dbc62489d08e555348ac218c19);
+            
+    
+            var marker_3b135367c8740c0837d0c562894fd1f6 = L.marker(
+                [-21.760833333333334, -43.350833333333334],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_7522dbf6b8b947d8ef99645973cdcd20 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2df13818ddfac8a2a517a0d33d373b4c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9d9bf5667eddcf57709df54492bf99f6 = $(`<div id="html_9d9bf5667eddcf57709df54492bf99f6" style="width: 100.0%; height: 100.0%;">Monumento Henrique Guilherme Fernando Halfeld</div>`)[0];
+                popup_2df13818ddfac8a2a517a0d33d373b4c.setContent(html_9d9bf5667eddcf57709df54492bf99f6);
+            
+        
+
+        marker_3b135367c8740c0837d0c562894fd1f6.bindPopup(popup_2df13818ddfac8a2a517a0d33d373b4c)
+        ;
+
+        
+    
+    
+                marker_3b135367c8740c0837d0c562894fd1f6.setIcon(icon_7522dbf6b8b947d8ef99645973cdcd20);
+            
+    
+            var marker_1a5426bb4c0450d3f36deecb88473cab = L.marker(
+                [-21.761111111111113, -43.35111111111111],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_c8dcefdb191985364411d19a756c3fac = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_82be18efc49364cb8af94eebe73c9a82 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e500444b4ce1a5952afc85517de84b06 = $(`<div id="html_e500444b4ce1a5952afc85517de84b06" style="width: 100.0%; height: 100.0%;">Monumento Hermenegildo Villaça</div>`)[0];
+                popup_82be18efc49364cb8af94eebe73c9a82.setContent(html_e500444b4ce1a5952afc85517de84b06);
+            
+        
+
+        marker_1a5426bb4c0450d3f36deecb88473cab.bindPopup(popup_82be18efc49364cb8af94eebe73c9a82)
+        ;
+
+        
+    
+    
+                marker_1a5426bb4c0450d3f36deecb88473cab.setIcon(icon_c8dcefdb191985364411d19a756c3fac);
+            
+    
+            var marker_b86935163181259d198b6c2bbc23b304 = L.marker(
+                [-21.760833333333334, -43.350833333333334],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_eda1cb32c2f5f858b226adad3e2a9592 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_920ae046a45a3f9a5b4da09eb41fc461 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd67e8db185df2263157b7bbe2b24030 = $(`<div id="html_fd67e8db185df2263157b7bbe2b24030" style="width: 100.0%; height: 100.0%;">Monumento Machado Sobrinho</div>`)[0];
+                popup_920ae046a45a3f9a5b4da09eb41fc461.setContent(html_fd67e8db185df2263157b7bbe2b24030);
+            
+        
+
+        marker_b86935163181259d198b6c2bbc23b304.bindPopup(popup_920ae046a45a3f9a5b4da09eb41fc461)
+        ;
+
+        
+    
+    
+                marker_b86935163181259d198b6c2bbc23b304.setIcon(icon_eda1cb32c2f5f858b226adad3e2a9592);
+            
+    
+            var marker_0b863079a5ee02462e2569e8fa96be9d = L.marker(
+                [-21.756944444444443, -43.35027777777778],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_55713899272fe1cf558937b801d28c0c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_98a3b150700cd9b91baaba340525ab84 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_719cf6f79fa3ca7108d6ff7608e86695 = $(`<div id="html_719cf6f79fa3ca7108d6ff7608e86695" style="width: 100.0%; height: 100.0%;">Monumento Mariano Procópio</div>`)[0];
+                popup_98a3b150700cd9b91baaba340525ab84.setContent(html_719cf6f79fa3ca7108d6ff7608e86695);
+            
+        
+
+        marker_0b863079a5ee02462e2569e8fa96be9d.bindPopup(popup_98a3b150700cd9b91baaba340525ab84)
+        ;
+
+        
+    
+    
+                marker_0b863079a5ee02462e2569e8fa96be9d.setIcon(icon_55713899272fe1cf558937b801d28c0c);
+            
+    
+            var marker_35db4e3b99741a958ca5205afea77170 = L.marker(
+                [-21.75777777777778, -43.35305555555556],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_8c245fc39382d8413599add8db7c5b81 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5d610177a2cc0776f91862f7b4bf6ab7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7fdfe886415bf18534f46d47d8c9c25a = $(`<div id="html_7fdfe886415bf18534f46d47d8c9c25a" style="width: 100.0%; height: 100.0%;">Monumento Menelick de Carvalho</div>`)[0];
+                popup_5d610177a2cc0776f91862f7b4bf6ab7.setContent(html_7fdfe886415bf18534f46d47d8c9c25a);
+            
+        
+
+        marker_35db4e3b99741a958ca5205afea77170.bindPopup(popup_5d610177a2cc0776f91862f7b4bf6ab7)
+        ;
+
+        
+    
+    
+                marker_35db4e3b99741a958ca5205afea77170.setIcon(icon_8c245fc39382d8413599add8db7c5b81);
+            
+    
+            var marker_a5655d7ec02c0ec2a1b7080fc58aee7a = L.marker(
+                [-21.746666666666666, -43.35472222222222],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_6d4b5846217440e7db9197caa721e223 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_03c2182f6190ee6106f28f6cfc8052f7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9cf6c84380e769ff0de1ea898edf1227 = $(`<div id="html_9cf6c84380e769ff0de1ea898edf1227" style="width: 100.0%; height: 100.0%;">Monumento Obelisco</div>`)[0];
+                popup_03c2182f6190ee6106f28f6cfc8052f7.setContent(html_9cf6c84380e769ff0de1ea898edf1227);
+            
+        
+
+        marker_a5655d7ec02c0ec2a1b7080fc58aee7a.bindPopup(popup_03c2182f6190ee6106f28f6cfc8052f7)
+        ;
+
+        
+    
+    
+                marker_a5655d7ec02c0ec2a1b7080fc58aee7a.setIcon(icon_6d4b5846217440e7db9197caa721e223);
+            
+    
+            var marker_f84916b7b9511a4338c4e78aae8e5c8e = L.marker(
+                [-21.761388888888888, -43.35],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_43f5077c8c73c692e5dd4682a8ec0bc1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2164226e7ab1cb1c3cd492918170eb64 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b849b5091f5fe01c5d404c44cd0156f3 = $(`<div id="html_b849b5091f5fe01c5d404c44cd0156f3" style="width: 100.0%; height: 100.0%;">Monumento Oscar da Gama</div>`)[0];
+                popup_2164226e7ab1cb1c3cd492918170eb64.setContent(html_b849b5091f5fe01c5d404c44cd0156f3);
+            
+        
+
+        marker_f84916b7b9511a4338c4e78aae8e5c8e.bindPopup(popup_2164226e7ab1cb1c3cd492918170eb64)
+        ;
+
+        
+    
+    
+                marker_f84916b7b9511a4338c4e78aae8e5c8e.setIcon(icon_43f5077c8c73c692e5dd4682a8ec0bc1);
+            
+    
+            var marker_64c0632f442c3085643942bb26563bda = L.marker(
+                [-21.747777777777777, -43.36055555555556],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_fee30f3057f0c38f6165f3c51970c776 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2e32b15e0212b9c414019cd14398c2d7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_df71f0597c3cc7d5b688815527252c2e = $(`<div id="html_df71f0597c3cc7d5b688815527252c2e" style="width: 100.0%; height: 100.0%;">Monumento Princesa Isabel</div>`)[0];
+                popup_2e32b15e0212b9c414019cd14398c2d7.setContent(html_df71f0597c3cc7d5b688815527252c2e);
+            
+        
+
+        marker_64c0632f442c3085643942bb26563bda.bindPopup(popup_2e32b15e0212b9c414019cd14398c2d7)
+        ;
+
+        
+    
+    
+                marker_64c0632f442c3085643942bb26563bda.setIcon(icon_fee30f3057f0c38f6165f3c51970c776);
+            
+    
+            var marker_44abc262e60561287b60d786e4b57001 = L.marker(
+                [-21.761388888888888, -43.350833333333334],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_7b26366435a2ce77e72ed3058ba7947e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0984f7a49dc5b599baaef5ec16edd682 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_248aaf81d04c95628f4dbd9fad6ad13e = $(`<div id="html_248aaf81d04c95628f4dbd9fad6ad13e" style="width: 100.0%; height: 100.0%;">Monumento Procópio Teixeira</div>`)[0];
+                popup_0984f7a49dc5b599baaef5ec16edd682.setContent(html_248aaf81d04c95628f4dbd9fad6ad13e);
+            
+        
+
+        marker_44abc262e60561287b60d786e4b57001.bindPopup(popup_0984f7a49dc5b599baaef5ec16edd682)
+        ;
+
+        
+    
+    
+                marker_44abc262e60561287b60d786e4b57001.setIcon(icon_7b26366435a2ce77e72ed3058ba7947e);
+            
+    
+            var marker_50d9cbecfb28d80b546cda8307deb021 = L.marker(
+                [-21.776944444444442, -43.343333333333334],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_3f82410a26a96e9259b746450e916770 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6613551232545b7339909e5009161af8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_811f1bc592666f39d44d997aa532a7ab = $(`<div id="html_811f1bc592666f39d44d997aa532a7ab" style="width: 100.0%; height: 100.0%;">Monumento Rubem Dario</div>`)[0];
+                popup_6613551232545b7339909e5009161af8.setContent(html_811f1bc592666f39d44d997aa532a7ab);
+            
+        
+
+        marker_50d9cbecfb28d80b546cda8307deb021.bindPopup(popup_6613551232545b7339909e5009161af8)
+        ;
+
+        
+    
+    
+                marker_50d9cbecfb28d80b546cda8307deb021.setIcon(icon_3f82410a26a96e9259b746450e916770);
+            
+    
+            var marker_66b0a8ffa0335b1f394e2b5d82cd3712 = L.marker(
+                [-21.753333333333334, -43.358333333333334],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_95ecfa2abcfa5d686c356af7bee9bbd5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7574ab7479a5badbbe95567449602be8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb310c10a8969b15efe1226a06505b45 = $(`<div id="html_cb310c10a8969b15efe1226a06505b45" style="width: 100.0%; height: 100.0%;">Monumento Zamenhoff</div>`)[0];
+                popup_7574ab7479a5badbbe95567449602be8.setContent(html_cb310c10a8969b15efe1226a06505b45);
+            
+        
+
+        marker_66b0a8ffa0335b1f394e2b5d82cd3712.bindPopup(popup_7574ab7479a5badbbe95567449602be8)
+        ;
+
+        
+    
+    
+                marker_66b0a8ffa0335b1f394e2b5d82cd3712.setIcon(icon_95ecfa2abcfa5d686c356af7bee9bbd5);
+            
+    
+            var marker_a25f203ffaef761e7c835db17fc12625 = L.marker(
+                [-21.760833333333334, -43.35],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_f4e76b98f83aef80136cefd2c7b7f2f2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_12bfec1bd2cbd57e2f00a75e9facf817 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_be5d172f955911dd9628f5ca4e61bfa5 = $(`<div id="html_be5d172f955911dd9628f5ca4e61bfa5" style="width: 100.0%; height: 100.0%;">Monumento a Francisco Halfeld</div>`)[0];
+                popup_12bfec1bd2cbd57e2f00a75e9facf817.setContent(html_be5d172f955911dd9628f5ca4e61bfa5);
+            
+        
+
+        marker_a25f203ffaef761e7c835db17fc12625.bindPopup(popup_12bfec1bd2cbd57e2f00a75e9facf817)
+        ;
+
+        
+    
+    
+                marker_a25f203ffaef761e7c835db17fc12625.setIcon(icon_f4e76b98f83aef80136cefd2c7b7f2f2);
+            
+    
+            var marker_40eddb1105629d3fe18b70b9b3640499 = L.marker(
+                [-21.76361111111111, -43.3575],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_d08a989e9af7f85b03c6053b8d2207a2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5686d93cfba9399d9f36b5109daa26a1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7a623cf63539d47b41e7e224130f9239 = $(`<div id="html_7a623cf63539d47b41e7e224130f9239" style="width: 100.0%; height: 100.0%;">Monumento ao Cristo Redentor</div>`)[0];
+                popup_5686d93cfba9399d9f36b5109daa26a1.setContent(html_7a623cf63539d47b41e7e224130f9239);
+            
+        
+
+        marker_40eddb1105629d3fe18b70b9b3640499.bindPopup(popup_5686d93cfba9399d9f36b5109daa26a1)
+        ;
+
+        
+    
+    
+                marker_40eddb1105629d3fe18b70b9b3640499.setIcon(icon_d08a989e9af7f85b03c6053b8d2207a2);
+            
+    
+            var marker_a06b3b615aeb9cf6c369fd3ffbd3ad6c = L.marker(
+                [-21.763333333333332, -43.35722222222223],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_cf1a631446b831823080277765629698 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_73ab4a959fa3e04407f10707a3fd46a6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2c8b47ef4412672d9465b921ac713965 = $(`<div id="html_2c8b47ef4412672d9465b921ac713965" style="width: 100.0%; height: 100.0%;">Morro do Imperador e entorno</div>`)[0];
+                popup_73ab4a959fa3e04407f10707a3fd46a6.setContent(html_2c8b47ef4412672d9465b921ac713965);
+            
+        
+
+        marker_a06b3b615aeb9cf6c369fd3ffbd3ad6c.bindPopup(popup_73ab4a959fa3e04407f10707a3fd46a6)
+        ;
+
+        
+    
+    
+                marker_a06b3b615aeb9cf6c369fd3ffbd3ad6c.setIcon(icon_cf1a631446b831823080277765629698);
+            
+    
+            var marker_55bd78b686d4a292ba2c0fe77a12d4a8 = L.marker(
+                [-21.761666666666667, -43.35111111111111],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_24f385c3ebc548668b120ad780c3cfc0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0bb2c345cd383fe9627085e530672952 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_350cfb2d0120792350c808a55628e937 = $(`<div id="html_350cfb2d0120792350c808a55628e937" style="width: 100.0%; height: 100.0%;">Núcleo Histórico Urbano de Juiz de Fora (569 domicílios)</div>`)[0];
+                popup_0bb2c345cd383fe9627085e530672952.setContent(html_350cfb2d0120792350c808a55628e937);
+            
+        
+
+        marker_55bd78b686d4a292ba2c0fe77a12d4a8.bindPopup(popup_0bb2c345cd383fe9627085e530672952)
+        ;
+
+        
+    
+    
+                marker_55bd78b686d4a292ba2c0fe77a12d4a8.setIcon(icon_24f385c3ebc548668b120ad780c3cfc0);
+            
+    
+            var marker_4d9075a91c014de77e938ffb4e601e7d = L.marker(
+                [-21.76, -43.343333333333334],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_207d88550697ff5146123ac69facdbca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_82ca3f9892bea1c9b931fda47012da2c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2166e38c26168f125dd959f77401b60b = $(`<div id="html_2166e38c26168f125dd959f77401b60b" style="width: 100.0%; height: 100.0%;">Padaria Glória</div>`)[0];
+                popup_82ca3f9892bea1c9b931fda47012da2c.setContent(html_2166e38c26168f125dd959f77401b60b);
+            
+        
+
+        marker_4d9075a91c014de77e938ffb4e601e7d.bindPopup(popup_82ca3f9892bea1c9b931fda47012da2c)
+        ;
+
+        
+    
+    
+                marker_4d9075a91c014de77e938ffb4e601e7d.setIcon(icon_207d88550697ff5146123ac69facdbca);
+            
+    
+            var marker_281afb7799951d4b383fd6245e92d1a7 = L.marker(
+                [-21.761388888888888, -43.349444444444444],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_378ee0df40d58e421b56ed0646451b70 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_adf6e918441a320713c8aec6e1ba2682 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_afa141ca0afbf4d53ad30f5432fd63a1 = $(`<div id="html_afa141ca0afbf4d53ad30f5432fd63a1" style="width: 100.0%; height: 100.0%;">Painel "As Quatro Estações"</div>`)[0];
+                popup_adf6e918441a320713c8aec6e1ba2682.setContent(html_afa141ca0afbf4d53ad30f5432fd63a1);
+            
+        
+
+        marker_281afb7799951d4b383fd6245e92d1a7.bindPopup(popup_adf6e918441a320713c8aec6e1ba2682)
+        ;
+
+        
+    
+    
+                marker_281afb7799951d4b383fd6245e92d1a7.setIcon(icon_378ee0df40d58e421b56ed0646451b70);
+            
+    
+            var marker_ef878c2c3987c3ab89be65ef1c44e8e5 = L.marker(
+                [-21.761388888888888, -43.349444444444444],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_6c101e6eb1ab3d3e3d5f2b462816fa9b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_02aa00a712ddca36eeeb5377acbb6f0e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c635e3df1270fea8486bdd946c03dc6c = $(`<div id="html_c635e3df1270fea8486bdd946c03dc6c" style="width: 100.0%; height: 100.0%;">Painel "Cavalos"</div>`)[0];
+                popup_02aa00a712ddca36eeeb5377acbb6f0e.setContent(html_c635e3df1270fea8486bdd946c03dc6c);
+            
+        
+
+        marker_ef878c2c3987c3ab89be65ef1c44e8e5.bindPopup(popup_02aa00a712ddca36eeeb5377acbb6f0e)
+        ;
+
+        
+    
+    
+                marker_ef878c2c3987c3ab89be65ef1c44e8e5.setIcon(icon_6c101e6eb1ab3d3e3d5f2b462816fa9b);
+            
+    
+            var marker_113041045282d12becc8148023914f33 = L.marker(
+                [-21.761388888888888, -43.35],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_93d110696d59286745c43a987d5b57b3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5fc9ccaa41c21bf083cb4fc4cf488225 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_004ec38d27fc99ecf7b698d43ec1bf40 = $(`<div id="html_004ec38d27fc99ecf7b698d43ec1bf40" style="width: 100.0%; height: 100.0%;">Paço Municipal de Juiz de Fora</div>`)[0];
+                popup_5fc9ccaa41c21bf083cb4fc4cf488225.setContent(html_004ec38d27fc99ecf7b698d43ec1bf40);
+            
+        
+
+        marker_113041045282d12becc8148023914f33.bindPopup(popup_5fc9ccaa41c21bf083cb4fc4cf488225)
+        ;
+
+        
+    
+    
+                marker_113041045282d12becc8148023914f33.setIcon(icon_93d110696d59286745c43a987d5b57b3);
+            
+    
+            var marker_3b46d0e4fca8e2b4bfb8ede2a13751b1 = L.marker(
+                [-21.759722222222223, -43.343333333333334],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_e37d9a1223fc6a12f16ab7912f4a4dc2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_048bb469c0024e3f01b1c67cd93f1fef = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4971f321f7bfc728c1d2d26ca9827949 = $(`<div id="html_4971f321f7bfc728c1d2d26ca9827949" style="width: 100.0%; height: 100.0%;">Prédio da Estação RFFSA e passarela anexa</div>`)[0];
+                popup_048bb469c0024e3f01b1c67cd93f1fef.setContent(html_4971f321f7bfc728c1d2d26ca9827949);
+            
+        
+
+        marker_3b46d0e4fca8e2b4bfb8ede2a13751b1.bindPopup(popup_048bb469c0024e3f01b1c67cd93f1fef)
+        ;
+
+        
+    
+    
+                marker_3b46d0e4fca8e2b4bfb8ede2a13751b1.setIcon(icon_e37d9a1223fc6a12f16ab7912f4a4dc2);
+            
+    
+            var marker_49285c93bf27efb7bfac78b347623ac0 = L.marker(
+                [-21.763055555555557, -43.34305555555556],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_5f8a028f8274d98ecc397a842971db35 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c27f12f23eac6efffef683fe3c1bb252 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d07c2bd5e267190736c39f054d2bc5b2 = $(`<div id="html_d07c2bd5e267190736c39f054d2bc5b2" style="width: 100.0%; height: 100.0%;">Remanescentes das antigas instalações da Cia Mineira de Eletricidade (Rua Espírito Santo, nº 467)</div>`)[0];
+                popup_c27f12f23eac6efffef683fe3c1bb252.setContent(html_d07c2bd5e267190736c39f054d2bc5b2);
+            
+        
+
+        marker_49285c93bf27efb7bfac78b347623ac0.bindPopup(popup_c27f12f23eac6efffef683fe3c1bb252)
+        ;
+
+        
+    
+    
+                marker_49285c93bf27efb7bfac78b347623ac0.setIcon(icon_5f8a028f8274d98ecc397a842971db35);
+            
+    
+            var marker_deeb9e571796eadcf39e3affc94d9845 = L.marker(
+                [-21.763055555555557, -43.34305555555556],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_da0c6c1502d1b09d2278be494972e49e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e966be2069a16ed9e7bea2a83d16e4fe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dc6a0316a1107ce4e70e80724eb7fafe = $(`<div id="html_dc6a0316a1107ce4e70e80724eb7fafe" style="width: 100.0%; height: 100.0%;">Remanescentes das antigas instalações da Cia Mineira de Eletricidade (Rua Espírito Santo, s/n)</div>`)[0];
+                popup_e966be2069a16ed9e7bea2a83d16e4fe.setContent(html_dc6a0316a1107ce4e70e80724eb7fafe);
+            
+        
+
+        marker_deeb9e571796eadcf39e3affc94d9845.bindPopup(popup_e966be2069a16ed9e7bea2a83d16e4fe)
+        ;
+
+        
+    
+    
+                marker_deeb9e571796eadcf39e3affc94d9845.setIcon(icon_da0c6c1502d1b09d2278be494972e49e);
+            
+    
+            var marker_f795bdc660dfed373f2d52363b9b89f2 = L.marker(
+                [-21.754444444444445, -43.35305555555556],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_e05cb3173ceed5aa224d57661c3c1091 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_04b5a419303c8d0f6ce0a0f1bcd42706 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e5969ed7dfc29a6da69bd4202ea62a77 = $(`<div id="html_e5969ed7dfc29a6da69bd4202ea62a77" style="width: 100.0%; height: 100.0%;">Tiro de Guerra 17</div>`)[0];
+                popup_04b5a419303c8d0f6ce0a0f1bcd42706.setContent(html_e5969ed7dfc29a6da69bd4202ea62a77);
+            
+        
+
+        marker_f795bdc660dfed373f2d52363b9b89f2.bindPopup(popup_04b5a419303c8d0f6ce0a0f1bcd42706)
+        ;
+
+        
+    
+    
+                marker_f795bdc660dfed373f2d52363b9b89f2.setIcon(icon_e05cb3173ceed5aa224d57661c3c1091);
+            
+    
+            var marker_13b4870afc2022a0dbff78c4e5717b9b = L.marker(
+                [-21.763333333333332, -43.34444444444445],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_ad7dda57e9399f89bb65d85bdd00d57f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f66f9aa835fdb6a6b6ca3b918910f1d7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_53330d7b0239a3a49ae000d641475b99 = $(`<div id="html_53330d7b0239a3a49ae000d641475b99" style="width: 100.0%; height: 100.0%;">Villa Iracema</div>`)[0];
+                popup_f66f9aa835fdb6a6b6ca3b918910f1d7.setContent(html_53330d7b0239a3a49ae000d641475b99);
+            
+        
+
+        marker_13b4870afc2022a0dbff78c4e5717b9b.bindPopup(popup_f66f9aa835fdb6a6b6ca3b918910f1d7)
+        ;
+
+        
+    
+    
+                marker_13b4870afc2022a0dbff78c4e5717b9b.setIcon(icon_ad7dda57e9399f89bb65d85bdd00d57f);
+            
+    
+            var marker_753b30c596eb020bb690f0ccd0ba9114 = L.marker(
+                [-21.76972222222222, -43.34777777777778],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_880836ceddb27ad286d62b7691450d30 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fc3fbe592fe7f1f58b8835d09141057e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c046a7e38f437a579d2dd8ebb155bf37 = $(`<div id="html_c046a7e38f437a579d2dd8ebb155bf37" style="width: 100.0%; height: 100.0%;">Círculo Militar</div>`)[0];
+                popup_fc3fbe592fe7f1f58b8835d09141057e.setContent(html_c046a7e38f437a579d2dd8ebb155bf37);
+            
+        
+
+        marker_753b30c596eb020bb690f0ccd0ba9114.bindPopup(popup_fc3fbe592fe7f1f58b8835d09141057e)
+        ;
+
+        
+    
+    
+                marker_753b30c596eb020bb690f0ccd0ba9114.setIcon(icon_880836ceddb27ad286d62b7691450d30);
+            
+    
+            var marker_4b8be14f20e0922c98837e4154e7dd64 = L.marker(
+                [-21.770555555555553, -43.346944444444446],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_1d6d21507e3fa2946e5197cfead1d2a8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ca2376af92140414868c038d76898edf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2e9535a8900b2129716a237f310a755d = $(`<div id="html_2e9535a8900b2129716a237f310a755d" style="width: 100.0%; height: 100.0%;">Residência Colucci</div>`)[0];
+                popup_ca2376af92140414868c038d76898edf.setContent(html_2e9535a8900b2129716a237f310a755d);
+            
+        
+
+        marker_4b8be14f20e0922c98837e4154e7dd64.bindPopup(popup_ca2376af92140414868c038d76898edf)
+        ;
+
+        
+    
+    
+                marker_4b8be14f20e0922c98837e4154e7dd64.setIcon(icon_1d6d21507e3fa2946e5197cfead1d2a8);
+            
+    
+            var marker_2bbb0429cf1f0c7446f4950a6e7dda5b = L.marker(
+                [-21.75888888888889, -43.34388888888889],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_6457cf603d2279659c691903f09cdacc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b49a4079366caa07d1270262b3e7dd39 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_46b0f65af5dadcca382c01e0fec3ae9c = $(`<div id="html_46b0f65af5dadcca382c01e0fec3ae9c" style="width: 100.0%; height: 100.0%;">Núcleo Histórico da RFFSA</div>`)[0];
+                popup_b49a4079366caa07d1270262b3e7dd39.setContent(html_46b0f65af5dadcca382c01e0fec3ae9c);
+            
+        
+
+        marker_2bbb0429cf1f0c7446f4950a6e7dda5b.bindPopup(popup_b49a4079366caa07d1270262b3e7dd39)
+        ;
+
+        
+    
+    
+                marker_2bbb0429cf1f0c7446f4950a6e7dda5b.setIcon(icon_6457cf603d2279659c691903f09cdacc);
+            
+    
+            var marker_c38e56d894aff10c5a088efc860fb15c = L.marker(
+                [-21.754444444444445, -43.352222222222224],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_32d74beb93fb21beff1420fd0c17ace3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c2574b9e78f0f9cb0a05aa9c7edcc4df = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8673229f940806ea4788b5cb11415913 = $(`<div id="html_8673229f940806ea4788b5cb11415913" style="width: 100.0%; height: 100.0%;">Antigo Mercado Municipal</div>`)[0];
+                popup_c2574b9e78f0f9cb0a05aa9c7edcc4df.setContent(html_8673229f940806ea4788b5cb11415913);
+            
+        
+
+        marker_c38e56d894aff10c5a088efc860fb15c.bindPopup(popup_c2574b9e78f0f9cb0a05aa9c7edcc4df)
+        ;
+
+        
+    
+    
+                marker_c38e56d894aff10c5a088efc860fb15c.setIcon(icon_32d74beb93fb21beff1420fd0c17ace3);
+            
+    
+            var marker_4d7a87b979ff39449a6f3ee09b09b3cb = L.marker(
+                [-21.738055555555558, -43.36083333333333],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_8235b55d93d65cc3fd026e3a304f9d60 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c314d55dae3c1bd9a7af3b013b093706 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e931f3427509818d5b2b38aa7e743c2d = $(`<div id="html_e931f3427509818d5b2b38aa7e743c2d" style="width: 100.0%; height: 100.0%;">Fazenda da Tapera</div>`)[0];
+                popup_c314d55dae3c1bd9a7af3b013b093706.setContent(html_e931f3427509818d5b2b38aa7e743c2d);
+            
+        
+
+        marker_4d7a87b979ff39449a6f3ee09b09b3cb.bindPopup(popup_c314d55dae3c1bd9a7af3b013b093706)
+        ;
+
+        
+    
+    
+                marker_4d7a87b979ff39449a6f3ee09b09b3cb.setIcon(icon_8235b55d93d65cc3fd026e3a304f9d60);
+            
+    
+            var marker_ff4474d77ecfbb996fefa7a36c016bd8 = L.marker(
+                [-21.742222222222225, -43.37388888888889],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_f3ecd61b6f937c258953827f24e12cf5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eab38d8df14210b20fedcd19e56af1a6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_14c19f0b692629f8ec3b56ee270e9ecb = $(`<div id="html_14c19f0b692629f8ec3b56ee270e9ecb" style="width: 100.0%; height: 100.0%;">CEMIG</div>`)[0];
+                popup_eab38d8df14210b20fedcd19e56af1a6.setContent(html_14c19f0b692629f8ec3b56ee270e9ecb);
+            
+        
+
+        marker_ff4474d77ecfbb996fefa7a36c016bd8.bindPopup(popup_eab38d8df14210b20fedcd19e56af1a6)
+        ;
+
+        
+    
+    
+                marker_ff4474d77ecfbb996fefa7a36c016bd8.setIcon(icon_f3ecd61b6f937c258953827f24e12cf5);
+            
+    
+            var marker_15929fa6feff9b0ce4b97ea038ded6f4 = L.marker(
+                [-21.7625, -43.35305555555556],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_256b05171d6d9d5e8486f24d2950a42b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7b6e65516dab0cba6949a287a170277c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cdade8a855fc04ccad8b0eddf1751bb1 = $(`<div id="html_cdade8a855fc04ccad8b0eddf1751bb1" style="width: 100.0%; height: 100.0%;">Colégio Cristo Redentor, antiga Academia de Comércio</div>`)[0];
+                popup_7b6e65516dab0cba6949a287a170277c.setContent(html_cdade8a855fc04ccad8b0eddf1751bb1);
+            
+        
+
+        marker_15929fa6feff9b0ce4b97ea038ded6f4.bindPopup(popup_7b6e65516dab0cba6949a287a170277c)
+        ;
+
+        
+    
+    
+                marker_15929fa6feff9b0ce4b97ea038ded6f4.setIcon(icon_256b05171d6d9d5e8486f24d2950a42b);
+            
+    
+            var marker_f1d4e7b759ea287ce74ec16f33df5316 = L.marker(
+                [-21.760277777777777, -43.346111111111114],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_f38524d66cfa3e5fadaa859ddc28b8cd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5de2f0f68bb5b7d62a90a1cffe9e3f4e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0df1a56d1038458b32a711867dbd39f9 = $(`<div id="html_0df1a56d1038458b32a711867dbd39f9" style="width: 100.0%; height: 100.0%;">Banco do Brasil</div>`)[0];
+                popup_5de2f0f68bb5b7d62a90a1cffe9e3f4e.setContent(html_0df1a56d1038458b32a711867dbd39f9);
+            
+        
+
+        marker_f1d4e7b759ea287ce74ec16f33df5316.bindPopup(popup_5de2f0f68bb5b7d62a90a1cffe9e3f4e)
+        ;
+
+        
+    
+    
+                marker_f1d4e7b759ea287ce74ec16f33df5316.setIcon(icon_f38524d66cfa3e5fadaa859ddc28b8cd);
+            
+    
+            var marker_f79676afb441a40d56e26d467e5536be = L.marker(
+                [-21.760555555555555, -43.34666666666667],
+                {
+}
+            ).addTo(marker_cluster_b164b252002479a35bb1c092369d1ab9);
+        
+    
+            var icon_62f0c3dbcc3f9ad45a66c25778e529c3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7ff9455540dc5af56102813efbb9d6f6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_703aa2ece7d56c23d66747c87d81944f = $(`<div id="html_703aa2ece7d56c23d66747c87d81944f" style="width: 100.0%; height: 100.0%;">Banco de Crédito Real</div>`)[0];
+                popup_7ff9455540dc5af56102813efbb9d6f6.setContent(html_703aa2ece7d56c23d66747c87d81944f);
+            
+        
+
+        marker_f79676afb441a40d56e26d467e5536be.bindPopup(popup_7ff9455540dc5af56102813efbb9d6f6)
+        ;
+
+        
+    
+    
+                marker_f79676afb441a40d56e26d467e5536be.setIcon(icon_62f0c3dbcc3f9ad45a66c25778e529c3);
+            
+    
+            marker_cluster_b164b252002479a35bb1c092369d1ab9.addTo(map_81b1a76e17fb199024fe9b42ef04a4b2);
+        
+    
+        function geo_json_5f734ca33a2a2a99de96ea1653e7329e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0, "opacity": 0, "radius": 0};
+            }
+        }
+        function geo_json_5f734ca33a2a2a99de96ea1653e7329e_pointToLayer(feature, latlng) {
+            var opts = {
+  "stroke": true,
+  "color": "#3388ff",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#3388ff",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+};
+            
+            let style = geo_json_5f734ca33a2a2a99de96ea1653e7329e_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.circle(latlng, opts)
+        }
+
+        function geo_json_5f734ca33a2a2a99de96ea1653e7329e_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_5f734ca33a2a2a99de96ea1653e7329e = L.geoJson(null, {
+                onEachFeature: geo_json_5f734ca33a2a2a99de96ea1653e7329e_onEachFeature,
+            
+                style: geo_json_5f734ca33a2a2a99de96ea1653e7329e_styler,
+                pointToLayer: geo_json_5f734ca33a2a2a99de96ea1653e7329e_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_5f734ca33a2a2a99de96ea1653e7329e_add (data) {
+            geo_json_5f734ca33a2a2a99de96ea1653e7329e
+                .addData(data);
+        }
+            geo_json_5f734ca33a2a2a99de96ea1653e7329e_add({"features": [{"geometry": {"coordinates": [-43.34805555555556, -21.761111111111113], "type": "Point"}, "id": "0", "properties": {"nome": "Ag\u00eancia Bradesco"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.34305555555556, -21.761388888888888], "type": "Point"}, "id": "1", "properties": {"nome": "Alf\u00e2ndega Seca"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.348888888888894, -21.75861111111111], "type": "Point"}, "id": "2", "properties": {"nome": "Antiga Diretoria de Higiene \u2013 DCE"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.346944444444446, -21.772777777777776], "type": "Point"}, "id": "3", "properties": {"nome": "Antiga Resid\u00eancia Iris Martins Vilela"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.348888888888894, -21.756944444444443], "type": "Point"}, "id": "4", "properties": {"nome": "Antigas Instala\u00e7\u00f5es da Companhia de Fia\u00e7\u00e3o e Tecelagem Santa Cruz"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.344722222222224, -21.761388888888888], "type": "Point"}, "id": "5", "properties": {"nome": "Antigas Instala\u00e7\u00f5es da F\u00e1brica Bernardo Mascarenhas"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.34305555555556, -21.7625], "type": "Point"}, "id": "6", "properties": {"nome": "Antigas instala\u00e7\u00f5es da Companhia Industrial e Construtora Pantaleone Arcuri"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.346111111111114, -21.760833333333334], "type": "Point"}, "id": "7", "properties": {"nome": "Antigo Palace Hotel"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.346111111111114, -21.760555555555555], "type": "Point"}, "id": "8", "properties": {"nome": "Antigo Palace Hotel"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.367222222222225, -21.791666666666668], "type": "Point"}, "id": "9", "properties": {"nome": "Antigos Bondes"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.34861111111111, -21.760555555555555], "type": "Point"}, "id": "10", "properties": {"nome": "Apito do meio-dia"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.39611111111111, -21.72694444444444], "type": "Point"}, "id": "11", "properties": {"nome": "Arquibancada do Clube H\u00edpico e Campestre"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.343333333333334, -21.759166666666665], "type": "Point"}, "id": "12", "properties": {"nome": "Associa\u00e7\u00e3o Comercial"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.344166666666666, -21.759722222222223], "type": "Point"}, "id": "13", "properties": {"nome": "Associa\u00e7\u00e3o Comercial"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35194444444445, -21.752777777777776], "type": "Point"}, "id": "14", "properties": {"nome": "Associa\u00e7\u00e3o Cultural e Beneficente \u00cdtalo Brasileira \"Anita Garibaldi\""}, "type": "Feature"}, {"geometry": {"coordinates": [-43.38472222222222, -21.792222222222225], "type": "Point"}, "id": "15", "properties": {"nome": "Avi\u00e3o Monomotor PP-Gan"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.34666666666667, -21.760833333333334], "type": "Point"}, "id": "16", "properties": {"nome": "Banco ITA\u00da, antigo BEMGE"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.36694444444444, -21.7925], "type": "Point"}, "id": "17", "properties": {"nome": "Bondes no Parque da Lajinha"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.34388888888889, -21.759722222222223], "type": "Point"}, "id": "18", "properties": {"nome": "Busto do Doutor Jo\u00e3o Penido"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.34638888888889, -21.77111111111111], "type": "Point"}, "id": "19", "properties": {"nome": "Capela Nosso Senhor dos Passos"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.367222222222225, -21.7375], "type": "Point"}, "id": "20", "properties": {"nome": "Capela de Santa Terezinha"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.34861111111111, -21.764444444444443], "type": "Point"}, "id": "21", "properties": {"nome": "Casa d\u0027It\u00e1lia"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.38444444444444, -21.708333333333332], "type": "Point"}, "id": "22", "properties": {"nome": "Casa-sede da Fazenda Ribeir\u00e3o das Rosas"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.341944444444444, -21.76388888888889], "type": "Point"}, "id": "23", "properties": {"nome": "Castelinho dos Bracher"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.34722222222222, -21.771666666666665], "type": "Point"}, "id": "24", "properties": {"nome": "Centro de Estudos Murilo Mendes"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.346944444444446, -21.760833333333334], "type": "Point"}, "id": "25", "properties": {"nome": "Cine Palace"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.343333333333334, -21.760277777777777], "type": "Point"}, "id": "26", "properties": {"nome": "Cine S\u00e3o Luiz"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.34777777777778, -21.761388888888888], "type": "Point"}, "id": "27", "properties": {"nome": "Cine-Theatro Central"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35027777777778, -21.75861111111111], "type": "Point"}, "id": "28", "properties": {"nome": "Cinema Excelsior"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.37361111111111, -21.742222222222225], "type": "Point"}, "id": "29", "properties": {"nome": "Companhia Mineira de Energia"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.356944444444444, -21.748333333333335], "type": "Point"}, "id": "30", "properties": {"nome": "Conjunto Arquitet\u00f4nico e Paisag\u00edstico do Col\u00e9gio Santa Catarina"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.344722222222224, -21.76722222222222], "type": "Point"}, "id": "31", "properties": {"nome": "Conjunto Paisag\u00edstico do Instituto Granbery"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.34388888888889, -21.759722222222223], "type": "Point"}, "id": "32", "properties": {"nome": "Conjunto da Pra\u00e7a da Esta\u00e7\u00e3o"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35055555555556, -21.761111111111113], "type": "Point"}, "id": "33", "properties": {"nome": "Conjunto do Parque Halfeld"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.349722222222226, -21.760833333333334], "type": "Point"}, "id": "34", "properties": {"nome": "Edif\u00edcio CIAMPI"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35305555555556, -21.754444444444445], "type": "Point"}, "id": "35", "properties": {"nome": "Edif\u00edcio Jesus de Oliveira"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.343611111111116, -21.76], "type": "Point"}, "id": "36", "properties": {"nome": "Edif\u00edcio Wagner Pereira"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35027777777778, -21.761666666666667], "type": "Point"}, "id": "37", "properties": {"nome": "Edif\u00edcio do antigo F\u00f3rum \u2013 atual C\u00e2mara Municipal"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.348888888888894, -21.763333333333332], "type": "Point"}, "id": "38", "properties": {"nome": "Edif\u00edcio dos \"Grupos Centrais\""}, "type": "Feature"}, {"geometry": {"coordinates": [-43.348888888888894, -21.76], "type": "Point"}, "id": "39", "properties": {"nome": "Edif\u00edcio sede da Ag\u00eancia da Empresa Brasileira de Correios e Tel\u00e9grafos de Juiz de Fora"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.347500000000004, -21.77111111111111], "type": "Point"}, "id": "40", "properties": {"nome": "Escola Estadual Duque de Caxias"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.34305555555556, -21.7625], "type": "Point"}, "id": "41", "properties": {"nome": "Escola Normal"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.60111111111111, -21.758055555555554], "type": "Point"}, "id": "42", "properties": {"nome": "Esta\u00e7\u00e3o Ferrovi\u00e1ria de Valadares"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.361111111111114, -21.747777777777777], "type": "Point"}, "id": "43", "properties": {"nome": "Esta\u00e7\u00e3o Mariano Proc\u00f3pio"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.350833333333334, -21.763333333333332], "type": "Point"}, "id": "44", "properties": {"nome": "F\u00f3rum da Cultura"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.34805555555556, -21.761388888888888], "type": "Point"}, "id": "45", "properties": {"nome": "Galeria Ali Halfeld"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.34805555555556, -21.761388888888888], "type": "Point"}, "id": "46", "properties": {"nome": "Galeria Azarias Vilela"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.344166666666666, -21.76], "type": "Point"}, "id": "47", "properties": {"nome": "Hotel Pr\u00edncipe"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.345, -21.760277777777777], "type": "Point"}, "id": "48", "properties": {"nome": "Hotel S\u00e3o Luis"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35583333333334, -21.75027777777778], "type": "Point"}, "id": "49", "properties": {"nome": "Igreja Nossa Senhora da Gl\u00f3ria"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.263333333333335, -21.81277777777778], "type": "Point"}, "id": "50", "properties": {"nome": "Igreja de S\u00e3o Francisco e seus altares e santos"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35305555555556, -21.752777777777776], "type": "Point"}, "id": "51", "properties": {"nome": "Igreja de S\u00e3o Roque"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35416666666667, -21.74388888888889], "type": "Point"}, "id": "52", "properties": {"nome": "Monumento Alfredo Lage"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35583333333334, -21.758333333333333], "type": "Point"}, "id": "53", "properties": {"nome": "Monumento Ant\u00f4nio Firjan"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35027777777778, -21.761388888888888], "type": "Point"}, "id": "54", "properties": {"nome": "Monumento Belmiro Braga"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.34388888888889, -21.761944444444445], "type": "Point"}, "id": "55", "properties": {"nome": "Monumento Bernardo Mascarenhas"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35, -21.760833333333334], "type": "Point"}, "id": "56", "properties": {"nome": "Monumento Cam\u00f5es"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.355555555555554, -21.758333333333333], "type": "Point"}, "id": "57", "properties": {"nome": "Monumento Dilermando Cruz"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.349444444444444, -21.76388888888889], "type": "Point"}, "id": "58", "properties": {"nome": "Monumento Dom Justino"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35583333333334, -21.747222222222224], "type": "Point"}, "id": "59", "properties": {"nome": "Monumento Dom Lasagna"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35055555555556, -21.756944444444443], "type": "Point"}, "id": "60", "properties": {"nome": "Monumento Get\u00falio Vargas"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.350833333333334, -21.760833333333334], "type": "Point"}, "id": "61", "properties": {"nome": "Monumento Henrique Guilherme Fernando Halfeld"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35111111111111, -21.761111111111113], "type": "Point"}, "id": "62", "properties": {"nome": "Monumento Hermenegildo Villa\u00e7a"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.350833333333334, -21.760833333333334], "type": "Point"}, "id": "63", "properties": {"nome": "Monumento Machado Sobrinho"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35027777777778, -21.756944444444443], "type": "Point"}, "id": "64", "properties": {"nome": "Monumento Mariano Proc\u00f3pio"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35305555555556, -21.75777777777778], "type": "Point"}, "id": "65", "properties": {"nome": "Monumento Menelick de Carvalho"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35472222222222, -21.746666666666666], "type": "Point"}, "id": "66", "properties": {"nome": "Monumento Obelisco"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35, -21.761388888888888], "type": "Point"}, "id": "67", "properties": {"nome": "Monumento Oscar da Gama"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.36055555555556, -21.747777777777777], "type": "Point"}, "id": "68", "properties": {"nome": "Monumento Princesa Isabel"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.350833333333334, -21.761388888888888], "type": "Point"}, "id": "69", "properties": {"nome": "Monumento Proc\u00f3pio Teixeira"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.343333333333334, -21.776944444444442], "type": "Point"}, "id": "70", "properties": {"nome": "Monumento Rubem Dario"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.358333333333334, -21.753333333333334], "type": "Point"}, "id": "71", "properties": {"nome": "Monumento Zamenhoff"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35, -21.760833333333334], "type": "Point"}, "id": "72", "properties": {"nome": "Monumento a Francisco Halfeld"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.3575, -21.76361111111111], "type": "Point"}, "id": "73", "properties": {"nome": "Monumento ao Cristo Redentor"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35722222222223, -21.763333333333332], "type": "Point"}, "id": "74", "properties": {"nome": "Morro do Imperador e entorno"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35111111111111, -21.761666666666667], "type": "Point"}, "id": "75", "properties": {"nome": "N\u00facleo Hist\u00f3rico Urbano de Juiz de Fora (569 domic\u00edlios)"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.343333333333334, -21.76], "type": "Point"}, "id": "76", "properties": {"nome": "Padaria Gl\u00f3ria"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.349444444444444, -21.761388888888888], "type": "Point"}, "id": "77", "properties": {"nome": "Painel \"As Quatro Esta\u00e7\u00f5es\""}, "type": "Feature"}, {"geometry": {"coordinates": [-43.349444444444444, -21.761388888888888], "type": "Point"}, "id": "78", "properties": {"nome": "Painel \"Cavalos\""}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35, -21.761388888888888], "type": "Point"}, "id": "79", "properties": {"nome": "Pa\u00e7o Municipal de Juiz de Fora"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.343333333333334, -21.759722222222223], "type": "Point"}, "id": "80", "properties": {"nome": "Pr\u00e9dio da Esta\u00e7\u00e3o RFFSA e passarela anexa"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.34305555555556, -21.763055555555557], "type": "Point"}, "id": "81", "properties": {"nome": "Remanescentes das antigas instala\u00e7\u00f5es da Cia Mineira de Eletricidade (Rua Esp\u00edrito Santo, n\u00ba 467)"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.34305555555556, -21.763055555555557], "type": "Point"}, "id": "82", "properties": {"nome": "Remanescentes das antigas instala\u00e7\u00f5es da Cia Mineira de Eletricidade (Rua Esp\u00edrito Santo, s/n)"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35305555555556, -21.754444444444445], "type": "Point"}, "id": "83", "properties": {"nome": "Tiro de Guerra 17"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.34444444444445, -21.763333333333332], "type": "Point"}, "id": "84", "properties": {"nome": "Villa Iracema"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.34777777777778, -21.76972222222222], "type": "Point"}, "id": "85", "properties": {"nome": "C\u00edrculo Militar"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.346944444444446, -21.770555555555553], "type": "Point"}, "id": "86", "properties": {"nome": "Resid\u00eancia Colucci"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.34388888888889, -21.75888888888889], "type": "Point"}, "id": "87", "properties": {"nome": "N\u00facleo Hist\u00f3rico da RFFSA"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.352222222222224, -21.754444444444445], "type": "Point"}, "id": "88", "properties": {"nome": "Antigo Mercado Municipal"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.36083333333333, -21.738055555555558], "type": "Point"}, "id": "89", "properties": {"nome": "Fazenda da Tapera"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.37388888888889, -21.742222222222225], "type": "Point"}, "id": "90", "properties": {"nome": "CEMIG"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.35305555555556, -21.7625], "type": "Point"}, "id": "91", "properties": {"nome": "Col\u00e9gio Cristo Redentor, antiga Academia de Com\u00e9rcio"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.346111111111114, -21.760277777777777], "type": "Point"}, "id": "92", "properties": {"nome": "Banco do Brasil"}, "type": "Feature"}, {"geometry": {"coordinates": [-43.34666666666667, -21.760555555555555], "type": "Point"}, "id": "93", "properties": {"nome": "Banco de Cr\u00e9dito Real"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_5f734ca33a2a2a99de96ea1653e7329e.addTo(map_81b1a76e17fb199024fe9b42ef04a4b2);
+        
+    
+            var geo_json_5f734ca33a2a2a99de96ea1653e7329esearchControl = new L.Control.Search({
+                layer: geo_json_5f734ca33a2a2a99de96ea1653e7329e,
+                
+                propertyName: 'nome',
+                
+                collapsed: false,
+                textPlaceholder: 'Buscar obra...',
+                position:'topleft',
+            
+                initial: false,
+                
+                hideMarkerOnCollapse: true
+            
+                });
+                geo_json_5f734ca33a2a2a99de96ea1653e7329esearchControl.on('search:locationfound', function(e) {
+                    geo_json_5f734ca33a2a2a99de96ea1653e7329e.setStyle(function(feature){
+                        return feature.properties.style
+                    })
+                    
+                    if(e.layer._popup)
+                        e.layer.openPopup();
+                })
+                geo_json_5f734ca33a2a2a99de96ea1653e7329esearchControl.on('search:collapsed', function(e) {
+                        geo_json_5f734ca33a2a2a99de96ea1653e7329e.setStyle(function(feature){
+                            return feature.properties.style
+                    });
+                });
+            map_81b1a76e17fb199024fe9b42ef04a4b2.addControl( geo_json_5f734ca33a2a2a99de96ea1653e7329esearchControl );
+
+        
+    
+            var layer_control_f6c843373770bebe8be409c4b9feb91d_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_874293e098e3328effffdc83d3699d1b,
+                },
+                overlays :  {
+                    "Bens Tombados" : marker_cluster_b164b252002479a35bb1c092369d1ab9,
+                },
+            };
+            let layer_control_f6c843373770bebe8be409c4b9feb91d = L.control.layers(
+                layer_control_f6c843373770bebe8be409c4b9feb91d_layers.base_layers,
+                layer_control_f6c843373770bebe8be409c4b9feb91d_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_81b1a76e17fb199024fe9b42ef04a4b2);
+
+        
+</script>
+</html>
