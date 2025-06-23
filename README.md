@@ -18,9 +18,9 @@ import json
 
 ### Baixamos a lista de bens tombados
 
+**Utilizamos a biblioteca BeautifulSoup para analisar o HTML e extrair as informações da tabela:**
+
 ``` python
-
-
 def extrair_bens_tombados():
     url = "https://pt.wikipedia.org/wiki/Lista_de_bens_tombados_em_Juiz_de_Fora" 
     response = requests.get(url)
@@ -48,7 +48,11 @@ def extrair_bens_tombados():
                 continue
 
     return bens_list
+```
 
+**Convertemos as coordenadas no formato DMS (graus, minutos, segundos) para decimal:**
+
+``` python
 def extrair_coordenadas(texto):
     if not texto.strip():
         return None, None
