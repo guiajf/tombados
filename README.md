@@ -1,8 +1,8 @@
 # Patrimônio histórico de Juiz de Fora
 
-Para mapeamento do patrimônio histórico de Juiz de Fora, considerando os
-bens tombados, realizamos o download de tabela existente na Wikipedia,
-com o auxílio de bibliotecas do Python.
+Desenvolvemos um projeto em Python para mapear os bens tombados do patrimônio histórico de Juiz de Fora, Minas Gerais. 
+Utilizamos técnicas de web scraping, processamento de dados e visualização geográfica, para criar um mapa interativo que 
+facilita a exploração dos marcos culturais do município.
 
 ### Importamos as bibliotecas
 
@@ -27,6 +27,10 @@ from dotenv import load_dotenv
 ```
 
 ### Baixamos a lista
+
+Extraímos os dados da Wikipedia, onde existe uma lista completa dos bens tombados na cidade.
+Utilizamos a biblioteca *BeautifulSoup* para analisar o HTML e extrair as informações da tabela.
+Ao mesmo tempo, convertemos as coordenadas no formato DMS (graus, minutos, segundos) para decimal.
 
 ``` python
 def extrair_bens_tombados():
