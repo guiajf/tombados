@@ -148,102 +148,20 @@ df.isna().sum()
 df = df.replace(['', np.nan], np.nan).dropna()
 df
 ```
-
-```{=html}
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Bem</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Acervo documental do "Fundo Câmara Municipal d...</td>
-      <td>-21.755278</td>
-      <td>-43.344167</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Agência Bradesco</td>
-      <td>-21.761111</td>
-      <td>-43.348056</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Agência Bradesco</td>
-      <td>-21.761111</td>
-      <td>-43.348056</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Alfândega Seca</td>
-      <td>-21.761389</td>
-      <td>-43.343056</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Antiga Diretoria de Higiene – DCE</td>
-      <td>-21.758611</td>
-      <td>-43.348889</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>135</th>
-      <td>Prédio da Estação RFFSA e passarela anexa</td>
-      <td>-21.759722</td>
-      <td>-43.343333</td>
-    </tr>
-    <tr>
-      <th>136</th>
-      <td>Remanescentes das antigas instalações da Cia M...</td>
-      <td>-21.763056</td>
-      <td>-43.343056</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>Remanescentes das antigas instalações da Cia M...</td>
-      <td>-21.763056</td>
-      <td>-43.343056</td>
-    </tr>
-    <tr>
-      <th>138</th>
-      <td>Tiro de Guerra 17</td>
-      <td>-21.754444</td>
-      <td>-43.353056</td>
-    </tr>
-    <tr>
-      <th>139</th>
-      <td>Villa Iracema</td>
-      <td>-21.763333</td>
-      <td>-43.344444</td>
-    </tr>
-  </tbody>
-</table>
-<p>140 rows × 3 columns</p>
-</div>
+``` python
+Bem	Latitude	Longitude
+0	Acervo documental do "Fundo Câmara Municipal d...	-21.755278	-43.344167
+1	Agência Bradesco	-21.761111	-43.348056
+2	Agência Bradesco	-21.761111	-43.348056
+3	Alfândega Seca	-21.761389	-43.343056
+4	Antiga Diretoria de Higiene – DCE	-21.758611	-43.348889
+...	...	...	...
+135	Prédio da Estação RFFSA e passarela anexa	-21.759722	-43.343333
+136	Remanescentes das antigas instalações da Cia M...	-21.763056	-43.343056
+137	Remanescentes das antigas instalações da Cia M...	-21.763056	-43.343056
+138	Tiro de Guerra 17	-21.754444	-43.353056
+139	Villa Iracema	-21.763333	-43.344444
+140 rows × 3 columns
 ```
 
 **Removemos os dados duplicados**
