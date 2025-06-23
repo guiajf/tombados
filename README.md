@@ -83,13 +83,9 @@ def extrair_coordenadas(texto):
 # Extração dos dados
 bens = extrair_bens_tombados()
 ```
-:::
 
-::: {#3d16fe6c-8daf-4e78-829d-9b0d98e068c0 .cell .markdown}
 ### Convertemos a lista em data frame
-:::
 
-::: {#152c483d-dd9b-4b26-83ed-86c271674946 .cell .code execution_count="3"}
 ``` python
 import pandas as pd
 
