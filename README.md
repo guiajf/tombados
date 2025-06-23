@@ -343,7 +343,7 @@ if __name__ == "__main__":
     4  Remanescentes das antigas instalações da Cia. ...  
 ```
 
-### Extraímos uma amostra do data frame
+### Extraímos uma amostra do dataframe
 
 ``` python
 df_tombados = pd.read_csv("bens_tombados.csv")
@@ -391,10 +391,10 @@ print(df_tombados_filtrado.head())
 
 ### Atribuímos nomes específicos aos registros genéricos
 
-``` python
-import pandas as pd
-import re
+Implementamos rotina para unir os dados da Wikipedia com os dados da **FUNALFA**,
+através da correspondência de endereços:
 
+``` python
 # Função para padronizar endereços
 def padronizar_endereco(endereco):
     # Remover "Imóvel à " e "nº"
@@ -476,7 +476,8 @@ print("DataFrame atualizado:")
 print(df_imovel_atualizado)
 
 # Salvar em CSV se necessário
-df_imovel_atualizado.to_csv('imoveis_atualizados.csv', index=False, encoding='utf-8-sig')```
+df_imovel_atualizado.to_csv('imoveis_atualizados.csv', index=False, encoding='utf-8-sig')
+```
 
 ### Filtramos o dataframe atualizado
 
