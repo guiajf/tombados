@@ -97,7 +97,7 @@ df.to_csv("bens_tombados_jf.csv", index=False, sep=";", encoding="utf-8")
 print(df)
 ```
 
-::: {.output .stream .stdout}
+``` python
                                                        Bem   Latitude  Longitude
     0    Acervo documental do "Fundo Câmara Municipal d... -21.755278 -43.344167
     1                                     Agência Bradesco -21.761111 -43.348056
@@ -112,6 +112,7 @@ print(df)
     139                                      Villa Iracema -21.763333 -43.344444
 
     [140 rows x 3 columns]
+```
 
 ### Inspecionamos o data frame
 
