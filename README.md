@@ -96,7 +96,7 @@ def extrair_coordenadas(texto):
 bens = extrair_bens_tombados()
 ```
 
-### Convertemos a lista em data frame
+### Convertemos a lista em dataframe
 
 Para facilitar a manipulação dos dados, convertemos a *lista* em *dataframe*:
 
@@ -105,7 +105,7 @@ df = pd.DataFrame(bens)
 df.to_csv("bens_tombados_jf.csv", index=False, sep=";", encoding="utf-8")
 ```
 
-### Inspecionamos o data frame
+### Inspecionamos o dataframe
 
 ``` python
 print(df.head())
@@ -151,89 +151,75 @@ df = df.replace(['', np.nan], np.nan).dropna()
 print(df.head())
 ```
 
-::: {.output .stream .stdout}
+``` python
                                                      Bem   Latitude  Longitude
     0  Acervo documental do "Fundo Câmara Municipal d... -21.755278 -43.344167
     1                                   Agência Bradesco -21.761111 -43.348056
     2                                   Agência Bradesco -21.761111 -43.348056
     3                                     Alfândega Seca -21.761389 -43.343056
     4                  Antiga Diretoria de Higiene – DCE -21.758611 -43.348889
-:::
-:::
+```
 
-::: {#eb75b70b-95b4-4741-a652-8eba7b909bdc .cell .code execution_count="34"}
 ``` python
 df = df.drop_duplicates()
 print(df.head())
 ```
 
-::: {.output .stream .stdout}
+``` python
                                                      Bem   Latitude  Longitude
     0  Acervo documental do "Fundo Câmara Municipal d... -21.755278 -43.344167
     1                                   Agência Bradesco -21.761111 -43.348056
     3                                     Alfândega Seca -21.761389 -43.343056
     4                  Antiga Diretoria de Higiene – DCE -21.758611 -43.348889
     5    Antiga Estação Ferroviária da Central do Brasil -22.903611 -43.191111
-:::
-:::
+```
 
-::: {#8d47e858-51b3-40a1-8911-c7c8e7172a9a .cell .code execution_count="35"}
 ``` python
 df = df.iloc[1:]
 print(df.head())
 ```
 
-::: {.output .stream .stdout}
+``` python
                                                    Bem   Latitude  Longitude
     1                                 Agência Bradesco -21.761111 -43.348056
     3                                   Alfândega Seca -21.761389 -43.343056
     4                Antiga Diretoria de Higiene – DCE -21.758611 -43.348889
     5  Antiga Estação Ferroviária da Central do Brasil -22.903611 -43.191111
     6      Antiga Estação Ferroviária de Santos Dumont -21.455833 -43.549722
-:::
-:::
+```
 
-::: {#6a20328b-5072-4fda-b3ec-b9164d4238a4 .cell .code execution_count="36"}
 ``` python
 df_temp = df[~df['Bem'].str.contains('Imóvel', case=False)]
 print(df_temp.head())
 ```
 
-::: {.output .stream .stdout}
+``` python
                                                    Bem   Latitude  Longitude
     1                                 Agência Bradesco -21.761111 -43.348056
     3                                   Alfândega Seca -21.761389 -43.343056
     4                Antiga Diretoria de Higiene – DCE -21.758611 -43.348889
     5  Antiga Estação Ferroviária da Central do Brasil -22.903611 -43.191111
     6      Antiga Estação Ferroviária de Santos Dumont -21.455833 -43.549722
-:::
-:::
+```
 
-::: {#1f88dbcf-9128-4b84-8914-5b2e3dee3665 .cell .markdown}
 ### Filtramos os bens com denominação genérica
-:::
 
-::: {#926b61c4-d0a6-458b-86a5-4e5bbb172804 .cell .code execution_count="37"}
 ``` python
 df_imovel = df[df['Bem'].str.contains('Imóvel', case=False)]
 print(df_imovel.head())
 ```
 
-::: {.output .stream .stdout}
+``` python
                                                   Bem   Latitude  Longitude
     60  Imóvel à Avenida Barão do Rio Branco, nº 3029 -21.768333 -43.347222
     61  Imóvel à Avenida Barão do Rio Branco, nº 3146 -21.769722 -43.347778
     62  Imóvel à Avenida Barão do Rio Branco, nº 3263 -21.770556 -43.346944
     63  Imóvel à Avenida Barão do Rio Branco, nº 3408 -21.771944 -43.347222
     64               Imóvel à Avenida Brasil, nº 2001 -21.758889 -43.343889
-:::
-:::
+```
 
-::: {#addd647c-8ca2-44a9-9a61-30fa65426a07 .cell .markdown}
 ### Manipulamos arquivo PDF com modelo llm
-:::
 
-::: {#426a58ba-22b0-4c25-937a-dac6ab6207ec .cell .code execution_count="38"}
 ``` python
 # Carregamos a chave API da Groq
 load_dotenv()
