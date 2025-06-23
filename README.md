@@ -226,7 +226,7 @@ print(df_imovel.head())
 ### Utilizamos modelo de linguagem para manipular arquivo pdf
 
 Nesta etapa, manipulamos a lista de bens tombados, atualizada em 24/08/2021,
-disponibilizada pela **FUNALFA** - Fundação Cultural Alfredo Ferreira Lage
+disponibilizada pela **FUNALFA** - Fundação Cultural Alfredo Ferreira Lage,
 no formato pdf, para extrair uma tabela com dados úteis para atualizar os bens
 com denominação genérica, tanto quanto possível.
 
