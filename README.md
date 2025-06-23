@@ -1,38 +1,11 @@
----
-jupyter:
-  kernelspec:
-    display_name: Python 3 (ipykernel)
-    language: python
-    name: python3
-  language_info:
-    codemirror_mode:
-      name: ipython
-      version: 3
-    file_extension: .py
-    mimetype: text/x-python
-    name: python
-    nbconvert_exporter: python
-    pygments_lexer: ipython3
-    version: 3.12.3
-  nbformat: 4
-  nbformat_minor: 5
----
-
-::: {#76e3e982-6efe-4caa-ae28-a6da5db08e71 .cell .markdown}
 # Patrimônio histórico de Juiz de Fora
-:::
 
-::: {#0d885cac-0f98-4129-82ee-e5834d3507cb .cell .markdown}
 Para mapeamento do patrimônio histórico de Juiz de Fora, considerando os
 bens tombados, realizamos o download de tabela existente na Wikipedia,
 com o auxílio de bibliotecas do Python.
-:::
 
-::: {#ad039b0a-d077-49e8-88eb-5031dc14f07d .cell .markdown}
 ### Importamos as bibliotecas
-:::
 
-::: {#bea97f41-f558-4bdc-839a-c501f9a92b76 .cell .code execution_count="50"}
 ``` python
 import numpy as np
 import pandas as pd
@@ -52,13 +25,9 @@ import json
 
 from dotenv import load_dotenv
 ```
-:::
 
-::: {#df286872-1c13-4d0e-97a6-3f502feae2c6 .cell .markdown}
 ### Baixamos a lista
-:::
 
-::: {#3242f221-e003-4acf-96d8-3b6ba4632a46 .cell .code execution_count="27"}
 ``` python
 def extrair_bens_tombados():
     url = "https://pt.wikipedia.org/wiki/Lista_de_bens_tombados_em_Juiz_de_Fora" 
@@ -122,24 +91,16 @@ def extrair_coordenadas(texto):
 # Extração dos dados
 bens = extrair_bens_tombados()
 ```
-:::
 
-::: {#3d16fe6c-8daf-4e78-829d-9b0d98e068c0 .cell .markdown}
 ### Convertemos a lista em data frame
-:::
 
-::: {#152c483d-dd9b-4b26-83ed-86c271674946 .cell .code execution_count="28"}
 ``` python
 df = pd.DataFrame(bens)
 df.to_csv("bens_tombados_jf.csv", index=False, sep=";", encoding="utf-8")
 ```
-:::
 
-::: {#25ccb245-9c58-4540-91c7-d77a8c884f6e .cell .markdown}
 ### Inspecionamos o data frame
-:::
 
-::: {#5b372fe9-4334-4b3a-843e-8d1533d9a790 .cell .code execution_count="29"}
 ``` python
 print(df.head())
 ```
@@ -151,50 +112,33 @@ print(df.head())
     2                                   Agência Bradesco -21.761111 -43.348056
     3                                     Alfândega Seca -21.761389 -43.343056
     4                  Antiga Diretoria de Higiene – DCE -21.758611 -43.348889
-:::
-:::
 
-::: {#ce2cb2a5-3c04-4e85-bd31-d1020b23d482 .cell .code execution_count="30"}
 ``` python
 df.shape
 ```
 
-::: {.output .execute_result execution_count="30"}
     (140, 3)
-:::
-:::
 
-::: {#8c85a2b5-3449-4aba-8b7a-f382e4b6c983 .cell .code execution_count="31"}
 ``` python
 print(df.isnull().sum())
 ```
 
-::: {.output .stream .stdout}
     Bem          0
     Latitude     0
     Longitude    0
     dtype: int64
-:::
-:::
 
-::: {#e2324b12-a172-4ac0-813c-ba121554ba6b .cell .code execution_count="32"}
 ``` python
 df.isna().sum()
 ```
 
-::: {.output .execute_result execution_count="32"}
     Bem          0
     Latitude     0
     Longitude    0
     dtype: int64
-:::
-:::
 
-::: {#2c3346ff-c899-4ddf-8019-f134ffb38b3f .cell .markdown}
 ### Limpeza de dados
-:::
 
-::: {#93e5a5fa-2fd2-4c0d-9b56-a5882e127025 .cell .code execution_count="33"}
 ``` python
 df = df.replace(['', np.nan], np.nan).dropna()
 print(df.head())
