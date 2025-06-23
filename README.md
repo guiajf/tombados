@@ -1,7 +1,5 @@
 # Patrimônio histórico de Juiz de Fora
-:::
 
-::: {#0d885cac-0f98-4129-82ee-e5834d3507cb .cell .markdown}
 Para mapeamento do patrimônio histórico de Juiz de Fora, considerando os
 bens tombados, realizamos o download de tabela existente na Wikipedia,
 com o auxílio de bibliotecas do Python.
