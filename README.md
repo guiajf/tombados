@@ -573,17 +573,15 @@ else:
 
     # Salvar mapa
     museu_mapa.save("mapa_bens_tombados_jf.html")
-    print("Mapa salvo como 'mapa_bens_tombados_jf.html'")
 ```
-
-::: {.output .stream .stdout}
-    Mapa salvo como 'mapa_bens_tombados_jf.html'
 ![](mapa_bens_tombados_1.png)
 
-### Agrupamos os dados em um mapa interativo
-:::
 
-::: {#6e7da073-d164-4a93-99e8-0c0cb3031db0 .cell .code execution_count="48"}
+### Agrupamos os dados em um mapa interativo
+
+Quando há muitos pontos de dados, convém utilizar a função de agrupamento,
+para melhorar a visibilidade e evitar a sobrecarga.
+
 ``` python
 if not bens:
     print("Nenhum bem foi extraído. Verifique a estrutura da tabela na página.")
@@ -656,15 +654,10 @@ else:
 
     # Salvar mapa
     museu_mapa.save("cluster_bens_tombados_jf.html")
-    print("Mapa salvo como 'cluster_bens_tombados_jf.html'")
 ```
 
-::: {.output .stream .stdout}
-    Mapa salvo como 'cluster_bens_tombados_jf.html'
-:::
-:::
+![](cluster1.png)
 
-::: {#18a9ff10-4124-4159-9a55-4a0764e5bba3 .cell .markdown}
 ### Filtramos os pontos dentro do polígono de Juiz de Fora
 :::
 
