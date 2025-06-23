@@ -321,28 +321,6 @@ if __name__ == "__main__":
     main()
 ```
 
-``` python
-    Extraindo texto do PDF...
-    Processando com o modelo LLM...
-    Convertendo para DataFrame...
-    Dados salvos em bens_tombados.csv
-
-    Preview dos dados:
-        id                                     endereco  \
-    0  ---                                   ----------   
-    1    1                             Rua Halfeld, s/n   
-    2    2                   Praça Dr. João Pessoa, s/n   
-    3    3                           Parque e Acervo do   
-    4    4  Rua Espírito Santo, 467 e Usina de Marmelos   
-
-                                           nome_edificio  
-    0                                      -------------  
-    1   Edifício do antigo Fórum, atual Câmara Municipal  
-    2                               Cine Theatro Central  
-    3                             Museu Mariano Procópio  
-    4  Remanescentes das antigas instalações da Cia. ...  
-```
-
 ### Extraímos uma amostra do dataframe
 
 ``` python
@@ -600,6 +578,7 @@ else:
 
 ::: {.output .stream .stdout}
     Mapa salvo como 'mapa_bens_tombados_jf.html'
+![](mapa_bens_tombados_1.png)
 
 ### Agrupamos os dados em um mapa interativo
 :::
