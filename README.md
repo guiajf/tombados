@@ -659,9 +659,12 @@ else:
 ![](cluster1.png)
 
 ### Filtramos os pontos dentro do polígono de Juiz de Fora
-:::
 
-::: {#ca5ab45b-ca91-4373-a4aa-f3af2d1ec6db .cell .code execution_count="56"}
+Para assegurar que todos os pontos de dados estejam dentro da área de interesse,
+aplicamos um filtro para extrair somente os bens tombados restritos ao polígono
+do município.
+
+
 ``` python
 # Obter os limites de Juiz de Fora
 place = 'Juiz de Fora, MG, Brasil'
@@ -761,13 +764,20 @@ else:
     museu_mapa.save("cluster_bens_tombados_jf_1.html")
     print(f"Mapa salvo com {len(bens_filtrados)} bens tombados dentro dos limites de JF")
 ```
+![](cluster2.png)
 
-::: {.output .stream .stdout}
-    Mapa salvo com 117 bens tombados dentro dos limites de JF
-:::
-:::
 
-::: {#622c7d41-b073-4ed8-be55-bb29793e04e2 .cell .code}
-``` python
-```
-:::
+### Considerações finais
+
+Para tornar o mapa mais funcional, utilizamos a função de *clustering* do pacote **folium**,
+que agrupa marcadores próximos, melhorando a visualização em áreas com muitos pontos. 
+Além disso, integramos um *plugin* de busca, para permitir a localização de bens tombados
+diretamente pelo nome, no mapa.
+
+O objetivo do projeto foi mostrar como a ciência de dados pode apoiar a preservação e 
+divulgação do patrimônio cultural, através da transformação de informações brutas 
+em ferramentas úteis.
+
+Os mapas interativos gerados podem ser abertos em qualquer navegador — basta fazer o download dos arquivos em formato HTML.
+
+
