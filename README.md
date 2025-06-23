@@ -235,8 +235,8 @@ com denominação genérica, tanto quanto possível.
 load_dotenv()
 
 # Configuração inicial
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")  # Substitua pela sua chave da Groq
-MODEL_NAME = "meta-llama/llama-4-maverick-17b-128e-instruct"  # Ou "gemini-1.5-pro" se disponível
+GROQ_API_KEY = os.getenv("GROQ_API_KEY") 
+MODEL_NAME = "meta-llama/llama-4-maverick-17b-128e-instruct"  
 PDF_PATH = "bens_tombados_17092021.pdf"
 
 # Função para extrair texto do PDF
