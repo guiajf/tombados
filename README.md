@@ -98,8 +98,6 @@ bens = extrair_bens_tombados()
 
 ### Convertemos a lista em dataframe
 
-Para facilitar a manipulação dos dados, convertemos a *lista* em *dataframe*:
-
 ``` python
 df = pd.DataFrame(bens)
 df.to_csv("bens_tombados_jf.csv", index=False, sep=";", encoding="utf-8")
@@ -146,6 +144,8 @@ df.isna().sum()
 
 ### Limpeza de dados
 
+**Removemos as linhas com valores em branco, nulos ou faltantes:**
+
 ``` python
 df = df.replace(['', np.nan], np.nan).dropna()
 print(df.head())
@@ -159,6 +159,8 @@ print(df.head())
     3                                     Alfândega Seca -21.761389 -43.343056
     4                  Antiga Diretoria de Higiene – DCE -21.758611 -43.348889
 ```
+
+**Removemos as linhas duplicadas:**
 
 ``` python
 df = df.drop_duplicates()
@@ -174,6 +176,8 @@ print(df.head())
     5    Antiga Estação Ferroviária da Central do Brasil -22.903611 -43.191111
 ```
 
+**Removemos a primeiro registro, pois não se trata de um bem imóvel:**
+
 ``` python
 df = df.iloc[1:]
 print(df.head())
@@ -187,6 +191,8 @@ print(df.head())
     5  Antiga Estação Ferroviária da Central do Brasil -22.903611 -43.191111
     6      Antiga Estação Ferroviária de Santos Dumont -21.455833 -43.549722
 ```
+
+**Criamos o dataframe contendo os bens rotulados:**
 
 ``` python
 df_temp = df[~df['Bem'].str.contains('Imóvel', case=False)]
@@ -218,7 +224,7 @@ print(df_imovel.head())
     64               Imóvel à Avenida Brasil, nº 2001 -21.758889 -43.343889
 ```
 
-### Manipulamos arquivo PDF com modelo llm
+### Utilizamos modelo de linguagem para manipular arquivo pdf
 
 ``` python
 # Carregamos a chave API da Groq
