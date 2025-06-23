@@ -98,6 +98,8 @@ bens = extrair_bens_tombados()
 
 ### Convertemos a lista em data frame
 
+Para facilitar a manipulação dos dados, convertemos a *lista* em *dataframe*:
+
 ``` python
 df = pd.DataFrame(bens)
 df.to_csv("bens_tombados_jf.csv", index=False, sep=";", encoding="utf-8")
@@ -109,13 +111,14 @@ df.to_csv("bens_tombados_jf.csv", index=False, sep=";", encoding="utf-8")
 print(df.head())
 ```
 
-::: {.output .stream .stdout}
+``` python
                                                      Bem   Latitude  Longitude
     0  Acervo documental do "Fundo Câmara Municipal d... -21.755278 -43.344167
     1                                   Agência Bradesco -21.761111 -43.348056
     2                                   Agência Bradesco -21.761111 -43.348056
     3                                     Alfândega Seca -21.761389 -43.343056
     4                  Antiga Diretoria de Higiene – DCE -21.758611 -43.348889
+```
 
 ``` python
 df.shape
