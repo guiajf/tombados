@@ -1,24 +1,3 @@
----
-jupyter:
-  kernelspec:
-    display_name: Python 3 (ipykernel)
-    language: python
-    name: python3
-  language_info:
-    codemirror_mode:
-      name: ipython
-      version: 3
-    file_extension: .py
-    mimetype: text/x-python
-    name: python
-    nbconvert_exporter: python
-    pygments_lexer: ipython3
-    version: 3.12.3
-  nbformat: 4
-  nbformat_minor: 5
----
-
-::: {#76e3e982-6efe-4caa-ae28-a6da5db08e71 .cell .markdown}
 # Patrimônio histórico de Juiz de Fora
 :::
 
@@ -26,13 +5,9 @@ jupyter:
 Para mapeamento do patrimônio histórico de Juiz de Fora, considerando os
 bens tombados, realizamos o download de tabela existente na Wikipedia,
 com o auxílio de bibliotecas do Python.
-:::
 
-::: {#ad039b0a-d077-49e8-88eb-5031dc14f07d .cell .markdown}
 ### Importamos as bibliotecas
-:::
 
-::: {#bea97f41-f558-4bdc-839a-c501f9a92b76 .cell .code execution_count="26"}
 ``` python
 import requests
 import numpy as np
@@ -42,13 +17,9 @@ import folium
 from folium.plugins import Search, MarkerCluster
 import json
 ```
-:::
 
-::: {#df286872-1c13-4d0e-97a6-3f502feae2c6 .cell .markdown}
 ### Baixamos a lista de bens tombados
-:::
 
-::: {#ca14fc82-ad4a-44b0-b9dd-abef445ef73a .cell .code execution_count="2"}
 ``` python
 
 
@@ -127,9 +98,7 @@ import pandas as pd
 df = pd.DataFrame(bens)
 df.to_csv("bens_tombados_jf.csv", index=False, sep=";", encoding="utf-8")
 ```
-:::
 
-::: {#5b372fe9-4334-4b3a-843e-8d1533d9a790 .cell .code execution_count="4"}
 ``` python
 print(df)
 ```
@@ -149,64 +118,42 @@ print(df)
     139                                      Villa Iracema -21.763333 -43.344444
 
     [140 rows x 3 columns]
-:::
-:::
 
-::: {#25ccb245-9c58-4540-91c7-d77a8c884f6e .cell .markdown}
 ### Inspecionamos o data frame
-:::
 
-::: {#ce2cb2a5-3c04-4e85-bd31-d1020b23d482 .cell .code execution_count="5"}
 ``` python
 df.shape
 ```
 
-::: {.output .execute_result execution_count="5"}
     (140, 3)
-:::
-:::
 
-::: {#8c85a2b5-3449-4aba-8b7a-f382e4b6c983 .cell .code execution_count="6"}
 ``` python
 print(df.isnull().sum())
 ```
 
-::: {.output .stream .stdout}
     Bem          0
     Latitude     0
     Longitude    0
     dtype: int64
-:::
-:::
 
-::: {#e2324b12-a172-4ac0-813c-ba121554ba6b .cell .code execution_count="7"}
 ``` python
 df.isna().sum()
 ```
 
-::: {.output .execute_result execution_count="7"}
     Bem          0
     Latitude     0
     Longitude    0
     dtype: int64
-:::
-:::
 
-::: {#2c3346ff-c899-4ddf-8019-f134ffb38b3f .cell .markdown}
 ### Limpeza de dados
-:::
 
-::: {#b3a71e7b-4a4f-4e5c-9312-9792cd793b89 .cell .markdown}
 **Removemos os registros com dados em branco**
-:::
 
-::: {#93e5a5fa-2fd2-4c0d-9b56-a5882e127025 .cell .code execution_count="8"}
 ``` python
 df = df.replace(['', np.nan], np.nan).dropna()
 df
 ```
 
-::: {.output .execute_result execution_count="8"}
 ```{=html}
 <div>
 <style scoped>
@@ -303,20 +250,14 @@ df
 <p>140 rows × 3 columns</p>
 </div>
 ```
-:::
-:::
 
-::: {#22a12a8b-207d-4f2b-b1a1-d43c6df45f39 .cell .markdown}
 **Removemos os dados duplicados**
-:::
 
-::: {#eb75b70b-95b4-4741-a652-8eba7b909bdc .cell .code execution_count="9"}
 ``` python
 df = df.drop_duplicates()
 df
 ```
 
-::: {.output .execute_result execution_count="9"}
 ```{=html}
 <div>
 <style scoped>
@@ -413,20 +354,14 @@ df
 <p>135 rows × 3 columns</p>
 </div>
 ```
-:::
-:::
 
-::: {#43b9f734-0bf8-4649-af0b-ce6a5b101a54 .cell .markdown}
 **Removemos o primeiro item do dataframe**
-:::
 
-::: {#8d47e858-51b3-40a1-8911-c7c8e7172a9a .cell .code execution_count="10"}
 ``` python
 df = df.iloc[1:]
 df
 ```
 
-::: {.output .execute_result execution_count="10"}
 ```{=html}
 <div>
 <style scoped>
@@ -536,7 +471,6 @@ df_temp = df[~df['Bem'].str.contains('Imóvel', case=False)]
 df_temp
 ```
 
-::: {.output .execute_result execution_count="11"}
 ```{=html}
 <div>
 <style scoped>
@@ -633,20 +567,14 @@ df_temp
 <p>87 rows × 3 columns</p>
 </div>
 ```
-:::
-:::
 
-::: {#1f88dbcf-9128-4b84-8914-5b2e3dee3665 .cell .markdown}
 ### Filtramos os bens sem denominação
-:::
 
-::: {#926b61c4-d0a6-458b-86a5-4e5bbb172804 .cell .code execution_count="12"}
 ``` python
 df_imovel = df[df['Bem'].str.contains('Imóvel', case=False)]
 df_imovel
 ```
 
-::: {.output .execute_result execution_count="12"}
 ```{=html}
 <div>
 <style scoped>
@@ -958,24 +886,16 @@ df_imovel
 </table>
 </div>
 ```
-:::
-:::
 
-::: {#5fc55463-7902-4996-b91e-b17272d92c5f .cell .code execution_count="13"}
 ``` python
 df_imovel.shape
 ```
 
 ::: {.output .execute_result execution_count="13"}
     (47, 3)
-:::
-:::
 
-::: {#addd647c-8ca2-44a9-9a61-30fa65426a07 .cell .markdown}
 ### Manipulamos arquivo PDF com llm
-:::
 
-::: {#426a58ba-22b0-4c25-937a-dac6ab6207ec .cell .code execution_count="14"}
 ``` python
 import os
 import pandas as pd
@@ -1081,7 +1001,6 @@ if __name__ == "__main__":
     main()
 ```
 
-::: {.output .stream .stdout}
     Extraindo texto do PDF...
     Processando com o modelo LLM...
     Convertendo para DataFrame...
@@ -1101,20 +1020,14 @@ if __name__ == "__main__":
     2                               Cine Theatro Central  
     3                             Museu Mariano Procópio  
     4  Remanescentes das antigas instalações da Cia. ...  
-:::
-:::
 
-::: {#568fe67f-76ec-4aad-b269-df7c9bd1a880 .cell .markdown}
 ### Extraímos uma amostra do data frame
-:::
 
-::: {#3b9f6323-5ae1-4a35-b3c0-8d8583eb5092 .cell .code execution_count="15"}
 ``` python
 df_tombados = pd.read_csv("bens_tombados.csv")
 df_tombados
 ```
 
-::: {.output .execute_result execution_count="15"}
 ```{=html}
 <div>
 <style scoped>
@@ -1211,20 +1124,14 @@ df_tombados
 <p>187 rows × 3 columns</p>
 </div>
 ```
-:::
-:::
 
-::: {#fdcad449-c2c4-487d-bdba-70bc7e8c88e1 .cell .markdown}
 ### Removemos os registros em branco
-:::
 
-::: {#7ef86d1b-56fd-4a37-b41d-112022d57115 .cell .code execution_count="16"}
 ``` python
 df_tombados_filtrado = df_tombados.dropna()
 df_tombados_filtrado
 ```
 
-::: {.output .execute_result execution_count="16"}
 ```{=html}
 <div>
 <style scoped>
@@ -1321,14 +1228,9 @@ df_tombados_filtrado
 <p>95 rows × 3 columns</p>
 </div>
 ```
-:::
-:::
 
-::: {#7cecc0f8-8223-424c-86ac-de6fe9e5f656 .cell .markdown}
 ### Atribuimos nomes aos registros inomimados
-:::
 
-::: {#eb581d87-cbb5-4022-a0d9-e2c5833bacd8 .cell .code execution_count="18"}
 ``` python
 import pandas as pd
 import re
@@ -1420,7 +1322,6 @@ print(df_imovel_atualizado)
 df_imovel_atualizado.to_csv('imoveis_atualizados_fuzzy.csv', index=False, encoding='utf-8-sig')
 ```
 
-::: {.output .stream .stdout}
 
     Resultado da atualização:
                                                        Bem   Latitude  Longitude
@@ -1471,20 +1372,14 @@ df_imovel_atualizado.to_csv('imoveis_atualizados_fuzzy.csv', index=False, encodi
     104                  Imóvel à Rua Silva Jardim, nº 296 -21.755278 -43.353056
     105                  Imóvel à Rua Silva Jardim, nº 306 -21.755278 -43.353056
     106  Edifício- Sede da Agência da Empresa Brasileir... -21.759444 -43.344444
-:::
-:::
 
-::: {#a6c380eb-b0d7-421d-ab6f-1f969ee1b9ae .cell .markdown}
 ### Removemos os bens que não foram atualizados
-:::
 
-::: {#dcf6f4d3-e2d9-4da7-a8f2-e312e697fd10 .cell .code execution_count="19"}
 ``` python
 df_imovel_nomeado = df_imovel_atualizado[~df_imovel_atualizado['Bem'].str.contains('Imóvel', case=False)]
 df_imovel_nomeado
 ```
 
-::: {.output .execute_result execution_count="19"}
 ```{=html}
 <div>
 <style scoped>
@@ -1700,21 +1595,15 @@ df_imovel_nomeado
 </table>
 </div>
 ```
-:::
-:::
 
-::: {#d7c97bfe-ef16-4d35-8c99-6d6a94ade091 .cell .markdown}
 ### Removemos os bens duplicados
-:::
 
-::: {#fdb8c0cd-7f0f-4e17-8474-3630b2b54e09 .cell .code execution_count="20"}
 ``` python
 df_imovel_nomeado = df_imovel_nomeado.iloc[:-1]
 df_bens = pd.concat([df_temp, df_imovel_nomeado], axis=0)
 df_bens
 ```
 
-::: {.output .execute_result execution_count="20"}
 ```{=html}
 <div>
 <style scoped>
@@ -1811,40 +1700,25 @@ df_bens
 <p>117 rows × 3 columns</p>
 </div>
 ```
-:::
-:::
 
-::: {#0803f71c-8ca5-4531-a416-5aaa74415e62 .cell .code execution_count="21"}
 ``` python
 df_temp.shape
 ```
 
-::: {.output .execute_result execution_count="21"}
     (87, 3)
-:::
-:::
 
-::: {#040cee7f-68c2-4edf-be2e-a12ba043edb0 .cell .code execution_count="22"}
 ``` python
 df_imovel_nomeado.shape
 ```
 
-::: {.output .execute_result execution_count="22"}
     (30, 3)
-:::
-:::
 
-::: {#7d2b0f99-e12d-4704-9ce0-ebd75d8c9398 .cell .code execution_count="23"}
 ``` python
 bens = df_bens.to_dict('records')
 ```
-:::
 
-::: {#ca08128a-acba-4a8d-afc1-4d510c5e65b9 .cell .markdown}
 ### Visualizamos os bens tombados em um mapa interativo
-:::
 
-::: {#8fda445f-d284-4644-ac29-fed881e73973 .cell .code execution_count="24"}
 ``` python
 
 
@@ -1922,14 +1796,9 @@ else:
 
 ::: {.output .stream .stdout}
     Mapa salvo como 'mapa_bens_tombados_jf.html'
-:::
-:::
 
-::: {#1d886fe6-40de-4f2f-9f63-3a80440c71b3 .cell .markdown}
 ### Agrupamos os bens tombados
-:::
 
-::: {#6e7da073-d164-4a93-99e8-0c0cb3031db0 .cell .code execution_count="27"}
 ``` python
 
 if not bens:
@@ -2006,16 +1875,10 @@ else:
     print("Mapa salvo como 'cluster_bens_tombados_jf.html'")
 ```
 
-::: {.output .stream .stdout}
     Mapa salvo como 'cluster_bens_tombados_jf.html'
-:::
-:::
 
-::: {#18a9ff10-4124-4159-9a55-4a0764e5bba3 .cell .markdown}
 ### Filtramos os pontos dentro do polígono de Juiz de Fora
-:::
 
-::: {#ca5ab45b-ca91-4373-a4aa-f3af2d1ec6db .cell .code execution_count="28"}
 ``` python
 # Obter os limites de Juiz de Fora
 place = 'Juiz de Fora, MG, Brasil'
@@ -2116,12 +1979,6 @@ else:
     print(f"Mapa salvo com {len(bens_filtrados)} bens tombados dentro dos limites de JF")
 ```
 
-::: {.output .stream .stdout}
     Mapa salvo com 115 bens tombados dentro dos limites de JF
-:::
-:::
 
-::: {#622c7d41-b073-4ed8-be55-bb29793e04e2 .cell .code}
-``` python
-```
-:::
+
