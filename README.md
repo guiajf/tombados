@@ -227,7 +227,7 @@ print(df_imovel.head())
 
 Nesta etapa, manipulamos a lista de bens tombados, atualizada em 24/08/2021,
 disponibilizada pela **FUNALFA** - Fundação Cultural Alfredo Ferreira Lage,
-no formato pdf, disponível em https://www.pjf.mg.gov.br/administracao_indireta/funalfa/patrimonio/arquivos/bens_tombados_17092021.pdf, 
+no formato pdf, disponível [aqui](https://www.pjf.mg.gov.br/administracao_indireta/funalfa/patrimonio/arquivos/bens_tombados_17092021.pdf), 
 para extrair uma tabela com dados úteis para atualizar os bens com denominação genérica, tanto quanto possível.
 
 Utilizamos o modelo multimodal *Llama 4 Maverick* da Meta, disponível gratuitamente em modo *preview* na plataforma [Groq](https://console.groq.com/home).
