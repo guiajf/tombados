@@ -18,7 +18,6 @@ from PyPDF2 import PdfReader
 import tempfile
 import base64
 import re
-from thefuzz import fuzz, process
 import folium
 from folium.plugins import Search, MarkerCluster 
 import json
@@ -393,90 +392,91 @@ print(df_tombados_filtrado.head())
 ### Atribuímos nomes específicos aos registros genéricos
 
 ``` python
-# Configuração do fuzzy matching
-LIMITE_SIMILARIDADE = 85  # Ajuste conforme necessidade (0-100)
+import pandas as pd
+import re
 
+# Função para padronizar endereços
 def padronizar_endereco(endereco):
-    # Remover termos irrelevantes e padronizar
-    endereco = re.sub(r'(Imóvel à |nº ?|,|\.)', '', str(endereco))
-    endereco = re.sub(r'\s+', ' ', endereco).strip().lower()
+    # Remover "Imóvel à " e "nº"
+    endereco = re.sub(r'Imóvel à ', '', endereco)
+    endereco = re.sub(r'nº ', '', endereco)
+    endereco = re.sub(r'nº', '', endereco)
     
-    # Padronizar variações comuns
-    substituicoes = {
-        'av ': 'avenida ',
-        'av. ': 'avenida ',
-        'r ': 'rua ',
-        'pc ': 'praça ',
-        'estr ': 'estrada '
-    }
-    for orig, subst in substituicoes.items():
-        endereco = endereco.replace(orig, subst)
+    # Padronizar Av. vs Avenida
+    endereco = re.sub(r'Av\.', 'Avenida', endereco)
     
+    # Remover espaços extras e vírgulas desnecessárias
+    endereco = re.sub(r'\s+', ' ', endereco).strip()
+    endereco = re.sub(r',\s*$', '', endereco)
+    
+    # Padronizar números (ex: "nº 711" -> "711")
+    endereco = re.sub(r'(\D)(\d+)', lambda m: f"{m.group(1).strip()} {m.group(2)}", endereco)
+    
+    return endereco.strip()
+
+# Função para extrair a parte do endereço que usaremos para matching
+def extrair_chave_endereco(endereco):
+    # Extrair tipo (Rua/Avenida/Praça) e nome
+    match = re.match(r'(Rua|Avenida|Praça|Estrada)\s+(.+)$', endereco)
+    if match:
+        tipo = match.group(1)
+        resto = match.group(2)
+        
+        # Extrair número se existir
+        num_match = re.search(r'(\d+)(?:\D|$)', resto)
+        numero = num_match.group(1) if num_match else None
+        
+        # Construir chave
+        if numero:
+            return f"{tipo} {resto.split(',')[0].strip()}, {numero}"
+        return f"{tipo} {resto.split(',')[0].strip()}"
     return endereco
 
-def encontrar_melhor_match(endereco_alvo, opcoes):
-    # Padronizar o endereço alvo
-    endereco_alvo_padrao = padronizar_endereco(endereco_alvo)
-    
-    # Padronizar todas as opções de referência
-    opcoes_padrao = [padronizar_endereco(op) for op in opcoes]
-    
-    # Usar fuzzywuzzy para encontrar a melhor correspondência
-    melhor_match, score = process.extractOne(
-        endereco_alvo_padrao,
-        opcoes_padrao,
-        scorer=fuzz.token_set_ratio
-    )
-    
-    # Retornar o endereço original (não padronizado) se atender ao limite
-    if score >= LIMITE_SIMILARIDADE:
-        return opcoes[opcoes_padrao.index(melhor_match)]
-    return None
-
-def atualizar_com_fuzzy_matching(df, df_imovel):
-    # Criar cópia explícita para evitar SettingWithCopyWarning
+# Atualizar df_imovel com os nomes dos edifícios
+def atualizar_bens_tombados(df, df_imovel):
+    # Criar cópias para não modificar os originais
+    df_clean = df.copy()
     df_imovel_clean = df_imovel.copy()
     
-    # Criar lista de endereços de referência
-    enderecos_referencia = df['endereco'].dropna().unique()
+    # Padronizar endereços em ambos DataFrames
+    df_imovel_clean['endereco_padrao'] = df_imovel_clean['Bem'].apply(padronizar_endereco)
+    df_imovel_clean['chave_endereco'] = df_imovel_clean['endereco_padrao'].apply(extrair_chave_endereco)
     
-    # Criar coluna temporária para os matches
-    df_imovel_clean['match_encontrado'] = None
+    df_clean['endereco_padrao'] = df_clean['endereco'].fillna('').apply(padronizar_endereco)
+    df_clean['chave_endereco'] = df_clean['endereco_padrao'].apply(extrair_chave_endereco)
     
-    # Para cada endereço em df_imovel, encontrar o melhor match
-    for idx, row in df_imovel_clean.iterrows():
-        endereco_imovel = row['Bem']
-        melhor_match = encontrar_melhor_match(endereco_imovel, enderecos_referencia)
-        
-        if melhor_match:
-            # Encontrar o nome do edifício correspondente
-            nome_edificio = df.loc[df['endereco'] == melhor_match, 'nome_edificio'].values[0]
-            df_imovel_clean.at[idx, 'match_encontrado'] = nome_edificio
+    # Criar dicionário de mapeamento (chave_endereco -> nome_edificio)
+    mapeamento = df_clean.set_index('chave_endereco')['nome_edificio'].to_dict()
     
-    # Atualizar a coluna 'Bem' onde encontramos matches
-    df_imovel_clean['Bem'] = df_imovel_clean.apply(
-        lambda x: x['match_encontrado'] if pd.notna(x['match_encontrado']) else x['Bem'],
-        axis=1
-    )
+    # Atualizar o campo 'Bem' no df_imovel
+    def atualizar_nome(row):
+        chave = row['chave_endereco']
+        if chave in mapeamento and pd.notna(mapeamento[chave]):
+            return mapeamento[chave]
+        return row['Bem']  # Manter o original se não encontrar
     
-    # Remover coluna temporária
-    df_imovel_clean.drop(columns=['match_encontrado'], inplace=True)
+    df_imovel_clean['Bem'] = df_imovel_clean.apply(atualizar_nome, axis=1)
+    
+    # Remover colunas temporárias
+    df_imovel_clean.drop(columns=['endereco_padrao', 'chave_endereco'], inplace=True)
     
     return df_imovel_clean
 
 # Exemplo de uso:
+# Supondo que df (do PDF) e df_imovel já existam como DataFrames
+
+# Carregar os DataFrames (exemplo)
 df = df_tombados_filtrado.copy()
 
-# Aplicar a atualização com fuzzy matching
-df_imovel_atualizado = atualizar_com_fuzzy_matching(df, df_imovel)
+# Atualizar o DataFrame
+df_imovel_atualizado = atualizar_bens_tombados(df, df_imovel)
 
-# Mostrar resultados
-#print("\nResultado da atualização:")
-#print(df_imovel_atualizado)
+# Mostrar resultado
+print("DataFrame atualizado:")
+print(df_imovel_atualizado)
 
-# Salvar resultado
-df_imovel_atualizado.to_csv('imoveis_atualizados_fuzzy.csv', index=False, encoding='utf-8-sig')
-```
+# Salvar em CSV se necessário
+df_imovel_atualizado.to_csv('imoveis_atualizados.csv', index=False, encoding='utf-8-sig')```
 
 ### Filtramos o dataframe atualizado
 
@@ -496,44 +496,33 @@ print(df_imovel_nomeado)
 95                                    Banco do Brasil -21.760278 -43.346111
 96                              Banco de Crédito Real -21.760556 -43.346667
 97                                        Cine Palace -21.760833 -43.346944
-
 ```
 
 ### Unificamos os dataframes
-:::
 
-::: {#fdb8c0cd-7f0f-4e17-8474-3630b2b54e09 .cell .code execution_count="43"}
 ``` python
 df_imovel_nomeado = df_imovel_nomeado.iloc[:-1]
 df_bens = pd.concat([df_temp, df_imovel_nomeado], axis=0)
 print(df_bens.head())
 ```
 
-::: {.output .stream .stdout}
+``` python
                                                    Bem   Latitude  Longitude
     1                                 Agência Bradesco -21.761111 -43.348056
     3                                   Alfândega Seca -21.761389 -43.343056
     4                Antiga Diretoria de Higiene – DCE -21.758611 -43.348889
     5  Antiga Estação Ferroviária da Central do Brasil -22.903611 -43.191111
     6      Antiga Estação Ferroviária de Santos Dumont -21.455833 -43.549722
-:::
-:::
+```
 
-::: {#45405d02-59f5-4619-8f85-782c26791e1b .cell .markdown}
 ### Convertemos o dataframe final em dicionário
-:::
 
-::: {#3411d44a-3b71-4820-88e6-16c4f9c356fe .cell .code execution_count="44"}
 ``` python
 bens = df_bens.to_dict('records')
 ```
-:::
 
-::: {#da692185-c501-4ace-a591-978f495dd7b8 .cell .markdown}
 ### Visualizamos os dados em um mapa interativo
-:::
 
-::: {#8fda445f-d284-4644-ac29-fed881e73973 .cell .code execution_count="45"}
 ``` python
 
 if not bens:
@@ -610,10 +599,7 @@ else:
 
 ::: {.output .stream .stdout}
     Mapa salvo como 'mapa_bens_tombados_jf.html'
-:::
-:::
 
-::: {#80f873ad-3311-4481-aa16-11061a39ddc3 .cell .markdown}
 ### Agrupamos os dados em um mapa interativo
 :::
 
