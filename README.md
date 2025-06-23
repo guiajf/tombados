@@ -322,7 +322,7 @@ if __name__ == "__main__":
     main()
 ```
 
-::: {.output .stream .stdout}
+``` python
     Extraindo texto do PDF...
     Processando com o modelo LLM...
     Convertendo para DataFrame...
@@ -342,20 +342,16 @@ if __name__ == "__main__":
     2                               Cine Theatro Central  
     3                             Museu Mariano Procópio  
     4  Remanescentes das antigas instalações da Cia. ...  
-:::
-:::
+```
 
-::: {#568fe67f-76ec-4aad-b269-df7c9bd1a880 .cell .markdown}
 ### Extraímos uma amostra do data frame
-:::
 
-::: {#3b9f6323-5ae1-4a35-b3c0-8d8583eb5092 .cell .code execution_count="39"}
 ``` python
 df_tombados = pd.read_csv("bens_tombados.csv")
 print(df_tombados.head())
 ```
 
-::: {.output .stream .stdout}
+``` python
         id                                     endereco  \
     0  ---                                   ----------   
     1    1                             Rua Halfeld, s/n   
@@ -369,20 +365,16 @@ print(df_tombados.head())
     2                               Cine Theatro Central  
     3                             Museu Mariano Procópio  
     4  Remanescentes das antigas instalações da Cia. ...  
-:::
-:::
+```
 
-::: {#cff9bfdd-0fc6-4695-bada-67c6100e5012 .cell .markdown}
 ### Removemos os registros em branco
-:::
 
-::: {#7ef86d1b-56fd-4a37-b41d-112022d57115 .cell .code execution_count="40"}
 ``` python
 df_tombados_filtrado = df_tombados.dropna()
 print(df_tombados_filtrado.head())
 ```
 
-::: {.output .stream .stdout}
+``` python
         id                                     endereco  \
     0  ---                                   ----------   
     1    1                             Rua Halfeld, s/n   
@@ -396,14 +388,10 @@ print(df_tombados_filtrado.head())
     2                               Cine Theatro Central  
     3                             Museu Mariano Procópio  
     4  Remanescentes das antigas instalações da Cia. ...  
-:::
-:::
+```
 
-::: {#b9b50a14-5eb5-44a0-a5dc-97153cefed55 .cell .markdown}
 ### Atribuímos nomes específicos aos registros genéricos
-:::
 
-::: {#eb581d87-cbb5-4022-a0d9-e2c5833bacd8 .cell .code execution_count="41"}
 ``` python
 # Configuração do fuzzy matching
 LIMITE_SIMILARIDADE = 85  # Ajuste conforme necessidade (0-100)
@@ -489,55 +477,28 @@ df_imovel_atualizado = atualizar_com_fuzzy_matching(df, df_imovel)
 # Salvar resultado
 df_imovel_atualizado.to_csv('imoveis_atualizados_fuzzy.csv', index=False, encoding='utf-8-sig')
 ```
-:::
 
-::: {#9d9cdbbb-eb8c-4de7-ba01-1b024c9c629a .cell .markdown}
 ### Filtramos o dataframe atualizado
-:::
 
-::: {#dcf6f4d3-e2d9-4da7-a8f2-e312e697fd10 .cell .code execution_count="42"}
 ``` python
 df_imovel_nomeado = df_imovel_atualizado[~df_imovel_atualizado['Bem'].str.contains('Imóvel', case=False)]
 print(df_imovel_nomeado)
 ```
 
-::: {.output .stream .stdout}
-                                                       Bem   Latitude  Longitude
-    60                              Escola Duque de Caxias -21.768333 -43.347222
-    61                                     Círculo Militar -21.769722 -43.347778
-    62                                  Residência Colucci -21.770556 -43.346944
-    63                                     Grupos Centrais -21.771944 -43.347222
-    64                  Anexo do Núcleo Histórico da RFFSA -21.758889 -43.343889
-    66                   DCE – Antiga Diretoria de Higiene -21.760556 -43.346667
-    67                   DCE – Antiga Diretoria de Higiene -21.760556 -43.346667
-    68                        Fábrica Bernardo Mascarenhas -21.760556 -43.346667
-    69                        Fábrica Bernardo Mascarenhas -21.760000 -43.346389
-    70                            Antigo Mercado Municipal -21.754444 -43.352222
-    71                                Associação Comercial -21.759722 -43.344167
-    72                                Cine Theatro Central -21.761389 -43.348056
-    73                                   Fazenda da Tapera -21.738056 -43.360833
-    75                              Castelinho dos Bracher -21.764722 -43.344722
-    76                              Castelinho dos Bracher -21.764722 -43.344722
-    77                              Castelinho dos Bracher -21.764722 -43.345833
-    90                                         Cine Palace -21.759167 -43.347222
-    91                                         Cine Palace -21.760000 -43.346944
-    92                                               CEMIG -21.742222 -43.373889
-    93                                Colégio do Carmo GHH -21.756667 -43.354444
-    94   Colégio Cristo Redentor, antiga Academia de Co... -21.762500 -43.353056
-    95                                     Banco do Brasil -21.760278 -43.346111
-    96                               Banco de Crédito Real -21.760556 -43.346667
-    97                                         Cine Palace -21.760833 -43.346944
-    98                                     Banco do Brasil -21.760556 -43.346667
-    99                                     Banco do Brasil -21.761111 -43.348056
-    100  Colégio Cristo Redentor, antiga Academia de Co... -21.761389 -43.348056
-    101                                    Banco do Brasil -21.761389 -43.348056
-    102  Colégio Cristo Redentor, antiga Academia de Co... -21.761389 -43.348056
-    103                                    Banco do Brasil -21.761389 -43.348056
-    106  Edifício-Sede da Agência da Empresa Brasileira... -21.759444 -43.344444
-:::
-:::
+``` python    Bem   Latitude  Longitude
+61                                    Círculo Militar -21.769722 -43.347778
+62                                 Residência Colucci -21.770556 -43.346944
+64                          Núcleo Histórico da RFFSA -21.758889 -43.343889
+70                           Antigo Mercado Municipal -21.754444 -43.352222
+73                                  Fazenda da Tapera -21.738056 -43.360833
+92                                              CEMIG -21.742222 -43.373889
+94  Colégio Cristo Redentor, antiga Academia de Co... -21.762500 -43.353056
+95                                    Banco do Brasil -21.760278 -43.346111
+96                              Banco de Crédito Real -21.760556 -43.346667
+97                                        Cine Palace -21.760833 -43.346944
 
-::: {#4dacb72b-4181-4e89-9c50-58ea2a89ef3a .cell .markdown}
+```
+
 ### Unificamos os dataframes
 :::
 
