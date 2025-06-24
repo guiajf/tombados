@@ -221,7 +221,7 @@ print(df_imovel.head())
     64               Imóvel à Avenida Brasil, nº 2001 -21.758889 -43.343889
 ```
 
-### Utilizamos modelo de linguagem para manipular arquivo pdf
+### Utilizamos modelo de linguagem (LLM) para manipular arquivo pdf
 
 Nesta etapa, manipulamos a lista de bens tombados, atualizada em 24/08/2021,
 disponibilizada pela **FUNALFA** - Fundação Cultural Alfredo Ferreira Lage,
