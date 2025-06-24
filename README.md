@@ -320,14 +320,6 @@ def main():
     # Salvar como CSV
     output_path = "bens_tombados.csv"
     df_funalfa.to_csv(output_path, index=False, encoding='utf-8-sig')
-    print(f"Dados salvos em {output_path}")
-    
-    # Mostrar preview
-    print("\nPreview dos dados:")
-    print(df_funalfa.head())
-
-if __name__ == "__main__":
-    main()
 ```
 
 ### Extraímos uma amostra do dataframe
