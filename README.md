@@ -7,20 +7,20 @@ Desenvolvemos um projeto em Python que mapeia os bens tombados do patrimônio hi
 ### Importamos as bibliotecas
 
 ``` python
+from bs4 import BeautifulSoup
+from groq import Groq
+from PyPDF2 import PdfReader
+from folium.plugins import Search, MarkerCluster
 import numpy as np
 import pandas as pd
 import osmnx as ox
 import requests
-from bs4 import BeautifulSoup
-import os
-from groq import Groq
-from PyPDF2 import PdfReader
+import folium
 import tempfile
 import base64
-import re
-import folium
-from folium.plugins import Search, MarkerCluster 
 import json
+import re
+import os
 
 from dotenv import load_dotenv
 ```
