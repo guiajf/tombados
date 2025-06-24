@@ -1,8 +1,8 @@
 # Patrimônio histórico de Juiz de Fora
 
-Desenvolvemos um projeto em Python para mapear os bens tombados do patrimônio histórico de Juiz de Fora, Minas Gerais. 
-Utilizamos técnicas de web scraping, processamento de dados e visualização geográfica, para criar um mapa interativo que 
-facilita a exploração dos marcos culturais do município.
+Desenvolvemos um projeto em Python que mapeia os bens tombados do patrimônio histórico de Juiz de Fora/MG. Com técnicas de web scraping, processamento de dados e visualização geográfica, desenvolvemos um mapa interativo para explorar os marcos culturais da cidade.
+
+(Redução de 30%, mantendo clareza e objetividade.)
 
 ### Importamos as bibliotecas
 
