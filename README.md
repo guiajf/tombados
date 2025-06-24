@@ -761,7 +761,6 @@ else:
 
     # Salvar mapa
     museu_mapa.save("cluster_bens_tombados_jf_1.html")
-    print(f"Mapa salvo com {len(bens_filtrados)} bens tombados dentro dos limites de JF")
 ```
 ![](cluster2.png)
 
