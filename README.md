@@ -1,6 +1,7 @@
 # Patrimônio histórico de Juiz de Fora
 
-Desenvolvemos um projeto em Python que mapeia os bens tombados do patrimônio histórico de Juiz de Fora/MG. Com técnicas de web scraping, processamento de dados, grandes modelos de linguagem (LLM) e visualização geográfica, desenvolvemos um mapa interativo para explorar os marcos culturais da cidade.
+Depois de percorrer o [Museu de Percurso Raphael Arcuri](https://www.instagram.com/museuraphaelarcuri?igsh=MWRjNWV1cnZnczE5aQ==),
+idealizado por [Letícia Rabelo](https://www.instagram.com/leticiarabelo.arq?igsh=dndsYTdsemM4ZWdw), delineamos um projeto em Python que mapeia os bens tombados do patrimônio histórico de Juiz de Fora/MG. Com técnicas de web scraping, processamento de dados, grandes modelos de linguagem (LLM) e visualização geográfica, implementamos um mapa interativo para explorar os marcos culturais da cidade.
 
 ### Importamos as bibliotecas
 
